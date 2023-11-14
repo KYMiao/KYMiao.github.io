@@ -24,10 +24,10 @@ canonical: https://minimal-light-theme.yliu.me/
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=HxFJ_DQAAAAJ&hl=en
-cv_link: assets/files/HanchaoZhangCV.pdf
+cv_link: assets/files/cv.pdf
 github_link: https://github.com/KYMiao
 linkedin: https://www.linkedin.com/in/keyan-miao-a1623818b/
-twitter: https://twitter.com/tedddddy_zhang
+# twitter: https://twitter.com/tedddddy_zhang
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 

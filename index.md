@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_blank"> Department of Engineering Science </a> at <a href="https://www.ox.ac.uk/" target="_blank"> University of Oxford </a>, as a member of the <a href="https://eng.ox.ac.uk/control/ target="_blank"">Control Engineering Group</a>, under the supervision of Dr. <a href="https://kgatsis.github.io/" target="_blank">Konstantinos Gatsis</a>. My research involves ...
+I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_blank"> Department of Engineering Science </a> at <a href="https://www.ox.ac.uk/" target="_blank"> University of Oxford </a>, as a member of the <a href="https://eng.ox.ac.uk/control/" target="_blank">Control Engineering Group</a>, under the supervision of Dr. <a href="https://kgatsis.github.io/" target="_blank">Konstantinos Gatsis</a>. My research involves ...
 
 In the summer of 2022, I had the opportunity to work as a Data Scientist Intern at <a href="https://about.google" target="_blank"> Google</a>, where I applied my statistical skills to real-world problems. 
 Prior to joining the Ph.D. program, I completed my master's degree in Biostatistics and Data Science from <a href="https://www.cornell.edu" target = "_blank"> Cornell University</a> advised by Prof. <a href= "https://www.idiaz.xyz" target = "_blank"> Iván Díaz</a>, and my bachelor's degree in International Finance from <a href="https://www.cueb.edu.cn" target = "_blank"> Capital University of Economics and Business</a>. 

@@ -19,7 +19,7 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## Awards
-- **[May. 2023]** <a href="https://gsas.nyu.edu/admissions/financial-aid/graduate-school-fellowships-and-assistantships.html" target="_blank">*MacCracken Awards*</a> for outstanding research and activities
+- **[Oct. 2020]** <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a>.
 
 
 <!-- {% include_relative _includes/publications.md %} -->

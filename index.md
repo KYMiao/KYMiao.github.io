@@ -19,8 +19,9 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## Awards
-- **[Oct. 2020]** <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a>.
+- **[Nov. 2020]** <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a> for best performance in the programme and project with significant original contribution to the topic area.
 
+- **[Oct. 2021]** *Oxford-Ashton Memorial Graduate Scholarship*.
 
 <!-- {% include_relative _includes/publications.md %} -->
 

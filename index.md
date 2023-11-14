@@ -18,9 +18,13 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 - **Robustness &amp; Stability of Machine Learning**
 
 
-## Awards
-- **[Oct. 2021]** *Oxford-Ashton Memorial Graduate Scholarship*.
-- **[Nov. 2020]** <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a> for best performance in the programme and project with significant original contribution to the topic area.
+## News
+- **[Nov. 2023] ** Paper <a href="https://openreview.net/forum?id=wErWEsPY8g" target="_blank">*Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs*</a> accepted by <a href="https://dlde-2023.github.io/" target="_blank"> The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop</a>.
+- **[Jun. 2023]** Attended <a href="https://l4dc.seas.upenn.edu/" target="_blank">*The 5th Annual Learning for Dynamics and Control Conference* in the University of Pennsylvania, Philadelphia, US.
+- **[Mar. 2023]** Paper <a href="https://proceedings.mlr.press/v211/miao23a.html" target="_blank">*Learning Robust State Observers using Neural ODEs*</a> published on Proceedings of Machine Learning Research.
+- **[Oct. 2021]** Joined University of Oxford with Research Studentship and *Oxford-Ashton Memorial Graduate Scholarship*.
+- **[Jul. 2021]** Paper <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/oca.2754">*Optimal control of a growth/consumption model*</a> published on Journal of Optimal Control Applications and Methods.
+- **[Nov. 2020]** Graduated from Imperial College London with <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a> for best performance in the programme and project with significant original contribution to the topic area.
 
 
 <!-- {% include_relative _includes/publications.md %} -->

@@ -1,14 +1,14 @@
 main:
 
-  # - title: Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs
-  #   authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
-  #   conference_short: DLDE III, 
-  #   conference: The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop
-  #   pdf: https://openreview.net/pdf?id=wErWEsPY8g
-  #   page: https://openreview.net/forum?id=wErWEsPY8g
-  #   bibtex: ./assets/files/towards.txt
-  #   image: ./assets/files/towards.pdf
-  #   notes: Accepted
+  - title: Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs
+    authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
+    conference_short: DLDE III, 
+    conference: The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop
+    # pdf: https://openreview.net/pdf?id=wErWEsPY8g
+    page: https://openreview.net/forum?id=wErWEsPY8g
+    bibtex: ./assets/files/towards.txt
+    # image: ./assets/files/towards.pdf
+    notes: Accepted
 
   # - title: Learning Robust State Observers using Neural ODEs
   #   authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis

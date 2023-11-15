@@ -17,7 +17,7 @@ main:
     pdf: https://openreview.net/pdf?id=wErWEsPY8g
     page: https://openreview.net/forum?id=wErWEsPY8g
     bibtex: ./assets/files/towards.txt
-    image: ./assets/files/towards.pdf
+    image: ./assets/files/towards.jpg
     notes: Accepted
 
   - title: Learning Robust State Observers using Neural ODEs

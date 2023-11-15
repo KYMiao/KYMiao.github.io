@@ -20,24 +20,24 @@ main:
     image: ./assets/files/towards.pdf
     notes: Accepted
 
-  # - title: Learning Robust State Observers using Neural ODEs
-  #   authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
-  #   conference_short: L4DC
-  #   conference: Learning for Dynamics and Control
-  #   pdf: https://proceedings.mlr.press/v211/miao23a/miao23a.pdf
-  #   page: https://proceedings.mlr.press/v211/miao23a.html
-  #   bibtex: ./assets/files/observer.txt
-  #   image: ./assets/files/observer.pdf
-  #   notes: Published
+  - title: Learning Robust State Observers using Neural ODEs
+    authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
+    conference_short: L4DC
+    conference: the 5th Learning for Dynamics and Control Conference, 2023
+    pdf: https://proceedings.mlr.press/v211/miao23a/miao23a.pdf
+    page: https://proceedings.mlr.press/v211/miao23a.html
+    bibtex: ./assets/files/observer.txt
+    image: ./assets/files/observer.pdf
+    notes: Published
 
-  # - title: Optimal control of a growth/consumption model
-  #   authors: <strong>Keyan Miao</strong>, Richard B. Vinter
-  #   conference_short: Optimal Control Applications and Methods
-  #   conference: Optimal Control Applications and Methods
-  #   pdf: https://www.researchgate.net/profile/Rb-Vinter/publication/353081987_Optimal_control_of_a_growthconsumption_model/links/6135e35bc69a4e487981b43c/Optimal-control-of-a-growth-consumption-model.pdf
-  #   page: https://onlinelibrary.wiley.com/doi/full/10.1002/oca.2754
-  #   bibtex: ./assets/files/growth.txt
-  #   image: ./assets/files/growth.pdf
-  #   notes: Published
+  - title: Optimal control of a growth/consumption model
+    authors: <strong>Keyan Miao</strong>, Richard B. Vinter
+    conference_short: Optimal Control Applications and Methods
+    conference: Optimal Control Applications and Methods
+    pdf: https://www.researchgate.net/profile/Rb-Vinter/publication/353081987_Optimal_control_of_a_growthconsumption_model/links/6135e35bc69a4e487981b43c/Optimal-control-of-a-growth-consumption-model.pdf
+    page: https://onlinelibrary.wiley.com/doi/full/10.1002/oca.2754
+    bibtex: ./assets/files/growth.txt
+    image: ./assets/files/growth.pdf
+    notes: Published
 
   

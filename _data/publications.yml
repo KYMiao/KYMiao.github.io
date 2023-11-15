@@ -10,7 +10,7 @@ main:
   #   image: ./assets/files/multi.jpg
   #   notes: Published
 
-  - title: Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs
+  - title: Multi-target electrochemical malaria aptasensor on flexible multielectrode arrays for detection in malaria parasite blood samples
     authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
     conference_short: DLDE III
     conference: The Symbiosis of Deep Learning and Differential Equations DLDE III NeurIPS 2023 Workshop

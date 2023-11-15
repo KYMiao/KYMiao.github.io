@@ -8,7 +8,7 @@ I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_
 
 Prior to joining the DPhil program, I obtained my master's degree in Control Systems from <a href="https://www.imperial.ac.uk/" target="_blank"> Imperial College London </a>, under the supervision of Professor <a href="https://www.imperial.ac.uk/people/r.vinter" target="_blank">Richard Vinter</a>, and my BEng degree in Detection, Guidance and Control from <a href="https://en.nwpu.edu.cn/" target="_blank"> Northwestern Polytechnical University</a>.
 
-Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/living-here/do-what-you-love/music" target="_blank"> Hertford College Orchestra </a>.
+Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/living-here/do-what-you-love/music" target="_blank"> Hertford College Orchestra</a>.
 
 
 ## Research Interests

@@ -4,7 +4,6 @@
 
 <ul>
 
-<li><strong>[Trinity 2022-2023]</strong> Lab Demonstrator of B15.</li>
-<li><strong>[Hilary 2022-2023]</strong> Lab Demonstrator of Lego football Coursework.</li>
+<li><strong>[Trinity 2022-2023]</strong> Lab Demonstrator of B15.</li><li><strong>[Hilary 2022-2023]</strong> Lab Demonstrator of Lego football Coursework.</li>
 </div>
 </ul>

@@ -1,33 +1,33 @@
 main:
 
-  - title: Multi-target electrochemical malaria aptasensor on flexible multielectrode arrays for detection in malaria parasite blood samples
-    authors: Gabriela Figueroa-Miranda, <strong>Song Chen</strong>, Marc Neis, Lei Zhou, Yuting Zhang, Young Lo, Julian Alexander Tanner, Andrea Kreidenweiss, Andreas Offenhäusser, Dirk Mayer
-    conference_short: Sens. Actuators B Chem.
-    conference: Sensors and Actuators B Chemical
-    pdf: ./assets/files/multi.pdf
-    page: https://www.sciencedirect.com/science/article/abs/pii/S0925400521013800?via%3Dihub
-    bibtex: ./assets/files/multi.txt
-    image: ./assets/files/multi.jpg
+  - title: Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs
+    authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
+    conference_short: DLDE III, 
+    conference: The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop
+    pdf: https://openreview.net/pdf?id=wErWEsPY8g
+    page: https://openreview.net/forum?id=wErWEsPY8g
+    bibtex: ./assets/files/towards.txt
+    image: ./assets/files/towards.pdf
+    notes: Accepted
+
+  - title: Learning Robust State Observers using Neural ODEs
+    authors: <strong>Keyan Miao</strong>, Konstantinos Gatsis
+    conference_short: L4DC
+    conference: Learning for Dynamics and Control
+    pdf: https://proceedings.mlr.press/v211/miao23a/miao23a.pdf
+    page: https://proceedings.mlr.press/v211/miao23a.html
+    bibtex: ./assets/files/observer.txt
+    image: ./assets/files/observer.pdf
     notes: Published
 
-  - title: Magneto‐Ionics in Annealed W/CoFeB/HfO2 Thin Films
-    authors: Rohit Pachat, Djoudi Ourdani, Maria‐andromachi Syskaki, Alessio Lamperti, Subhajit Roy, <strong>Song Chen</strong>, Adriano Di Pietro, Ludovic Largeau, Roméo Juge, Maryam Massouras, Cristina Balan, Johannes Wilhelmus van der Jagt, Guillaume Agnus, Yves Roussigné, Mihai Gabor, Salim Mourad Chérif, Gianfranco Durin, Shimpei Ono, Jürgen Langer, Damien Querlioz, Dafiné Ravelosona, Mohamed Belmeguenai, Liza Herrera Diez
-    conference_short: Adv. Mater. Interfaces
-    conference: Advanced Materials Interfaces
-    pdf: https://onlinelibrary.wiley.com/doi/pdf/10.1002/admi.202200690
-    page: https://www.sciencedirect.com/science/article/abs/pii/S0925400521013800?via%3Dihub
-    bibtex: ./assets/files/magnetoionic.txt
-    image: ./assets/files/admi202270196-gra-0001-m.jpg
-    notes: Published
-
-  - title: Flexible multielectrode arrays based electrochemical aptasensor for glycated human serum albumin detection
-    authors: Lei Zhou, Gabriela Figueroa-Miranda, <strong>Song Chen</strong>, Marc Neis, Ziheng Hu, Ruifeng Zhu, Yaqi Li, Michael Prömpers, Andreas Offenhäusser, Dirk Mayer
-    conference_short: Sens. Actuators B Chem.
-    conference: Sensors and Actuators B Chemical
-    pdf: ./assets/files/SSRN-id4328224.pdf
-    page: https://www.sciencedirect.com/science/article/abs/pii/S0925400523004458
-    bibtex: ./assets/files/flexible.txt
-    image: ./assets/files/1-s2.0-S0925400523004458-ga1_lrg.jpg
+  - title: Optimal control of a growth/consumption model
+    authors: <strong>Keyan Miao</strong>, Richard B. Vinter
+    conference_short: Optimal Control Applications and Methods
+    conference: Optimal Control Applications and Methods
+    pdf: https://www.researchgate.net/profile/Rb-Vinter/publication/353081987_Optimal_control_of_a_growthconsumption_model/links/6135e35bc69a4e487981b43c/Optimal-control-of-a-growth-consumption-model.pdf
+    page: https://onlinelibrary.wiley.com/doi/full/10.1002/oca.2754
+    bibtex: ./assets/files/growth.txt
+    image: ./assets/files/growth.pdf
     notes: Published
 
   

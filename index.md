@@ -27,17 +27,15 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 - **[Nov. 2020]** Graduated from Imperial College London with <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a> for best performance in the programme and project with significant original contribution to the topic area.
 
 
-## Teaching
-- **[Trinity 2022-2023]** Lab Demonstrator of B15.
-- **[Hilary 2022-2023]** Lab Demonstrator of Lego football Coursework.
-
-
 <!-- {% include_relative _includes/publications.md %} -->
 
 
 {% include_relative _includes/publications.md %}
 
 
+## Teaching
+- **[Trinity 2022-2023]** Lab Demonstrator of B15.
+- **[Hilary 2022-2023]** Lab Demonstrator of Lego football Coursework.
 
 
 

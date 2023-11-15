@@ -17,7 +17,7 @@ main:
     pdf: https://openreview.net/pdf?id=wErWEsPY8g
     page: https://openreview.net/forum?id=wErWEsPY8g
     bibtex: ./assets/files/towards.txt
-    image: ./assets/files/towards.jpg
+    image: ./assets/files/towards.pdf
     notes: Accepted
 
   - title: Learning Robust State Observers using Neural ODEs
@@ -27,7 +27,7 @@ main:
     pdf: https://proceedings.mlr.press/v211/miao23a/miao23a.pdf
     page: https://proceedings.mlr.press/v211/miao23a.html
     bibtex: ./assets/files/observer.txt
-    image: ./assets/files/observer.jpg
+    image: ./assets/files/observer.pdf
     notes: Published
 
   - title: Optimal control of a growth/consumption model
@@ -37,7 +37,7 @@ main:
     pdf: https://www.researchgate.net/profile/Rb-Vinter/publication/353081987_Optimal_control_of_a_growthconsumption_model/links/6135e35bc69a4e487981b43c/Optimal-control-of-a-growth-consumption-model.pdf
     page: https://onlinelibrary.wiley.com/doi/full/10.1002/oca.2754
     bibtex: ./assets/files/growth.txt
-    image: ./assets/files/growth.jpg
+    image: ./assets/files/growth.pdf
     notes: Published
 
   

@@ -1,0 +1,1 @@
+@article{miao2021optimal,  title={Optimal control of a growth/consumption model},  author={Miao, Keyan and Vinter, Richard},  journal={Optimal Control Applications and Methods},  volume={42},  number={6},  pages={1672--1688},  year={2021},  publisher={Wiley Online Library}}

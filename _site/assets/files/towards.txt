@@ -1,0 +1,1 @@
+@inproceedings{miao2023towards,title={Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural {ODE}s},author={Keyan Miao and Konstantinos Gatsis},booktitle={The Symbiosis of Deep Learning and Differential Equations III},year={2023},url={https://openreview.net/forum?id=wErWEsPY8g}}

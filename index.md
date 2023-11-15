@@ -29,7 +29,7 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 <!-- {% include_relative _includes/publications.md %} -->
 
-{% include_relative _includes/projects.md %}
+{% include_relative _includes/publications.md %}
 
 {% include_relative _includes/talks.md %}
 

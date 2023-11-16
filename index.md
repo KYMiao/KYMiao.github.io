@@ -25,13 +25,13 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 - **[Oct. 2021]** Joined University of Oxford with Research Studentship and *Oxford-Ashton Memorial Graduate Scholarship*.
 - **[Jul. 2021]** Paper <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/oca.2754">*Optimal control of a growth/consumption model*</a> published on Journal of Optimal Control Applications and Methods.
 - **[Nov. 2020]** Graduated from Imperial College London with <a href="https://www.imperial.ac.uk/electrical-engineering/study/current-students-course-handbook/postgraduate-prizes/msc-prizes/" target="_blank">*Outstanding Achievement: Control Systems MSc &amp; Hertha Ayrton Centenary Prize(Best Project)*</a> for best performance in the programme and project with significant original contribution to the topic area.
-
+{% include_relative _includes/teaching.md %}
 
 <!-- {% include_relative _includes/publications.md %} -->
 
 
 {% include_relative _includes/publications.md %}
-{% include_relative _includes/teaching.md %}
+
 
 
 

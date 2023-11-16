@@ -345,7 +345,11 @@ h2 {
 
 @media (prefers-color-scheme: dark) {
 
-  h1,
+  h1 {
+  font-weight: 500;
+  color: #828282;
+  margin: 0 0 8px;
+}
   h3 {
     font-weight: 300;
     color: #404040;

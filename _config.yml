@@ -9,7 +9,7 @@ position: Ph.D. Candidate
 affiliation: University of Oxford
 subaffiliation: Department of Engineering - Control Group 
 affiliation_link: https://www.ox.ac.uk
-# affiliation_logo: ./assets/img/affiliation.svg
+affiliation_logo: ./assets/img/affiliation.png
 subaffiliation_link: https://eng.ox.ac.uk/control
 email: keyan.miao@eng.ox.ac.uk
 address: ETB 30.09 Oxford OX1 3PH

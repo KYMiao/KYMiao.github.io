@@ -19,7 +19,7 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## News
-- **[Dec. 2023]** Received NeurIPs Travel Grant funded by <a href="[https://openreview.net/forum?id=wErWEsPY8g](https://www.gresearch.com/blog/article/g-research-november-2023-grant-winners/)" target="_blank">*G-Research*</a>.
+- **[Dec. 2023]** Received NeurIPs Travel Grant funded by <a href="https://www.gresearch.com/blog/article/g-research-november-2023-grant-winners/" target="_blank">*G-Research*</a>.
 - **[Nov. 2023]** Paper <a href="https://openreview.net/forum?id=wErWEsPY8g" target="_blank">*Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs*</a> accepted by <a href="https://dlde-2023.github.io/" target="_blank"> The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop</a>.
 - **[Jun. 2023]** Attended <a href="https://l4dc.seas.upenn.edu/" target="_blank">*The 5th Annual Learning for Dynamics and Control Conference*</a> in the University of Pennsylvania, Philadelphia, US.
 - **[Mar. 2023]** Paper <a href="https://proceedings.mlr.press/v211/miao23a.html" target="_blank">*Learning Robust State Observers using Neural ODEs*</a> published on Proceedings of Machine Learning Research.

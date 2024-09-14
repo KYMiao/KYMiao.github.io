@@ -19,6 +19,9 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## News
+- **[Jul. 2024]** Attended <a href="https://icml.cc/" target="_blank">*The Forty-first International Conference on Machine Learning*</a> at Messe Wien Exhibition Congress Center, Vienna, Austria.
+- **[Jul. 2024]** Volunteered at <a href="https://l4dc.web.ox.ac.uk/home" target="_blank">*6th Annual Learning for Dynamics & Control Conference*</a> in the University of Oxford, UK.
+- **[May. 2024]** Paper <a href="https://openreview.net/pdf?id=f6QenZyyeP" target="_blank">*How Deep Do We Need: Accelerating Training and Inference of Neural ODEs via Control Perspective*</a> published on <a href="https://proceedings.mlr.press/v235/miao24a.html" target="_blank"> Proceedings of the 41st International Conference on Machine Learning, PMLR 235:35528-35545</a>.
 - **[Dec. 2023]** Received NeurIPs Travel Grant funded by <a href="https://www.gresearch.com/blog/article/g-research-november-2023-grant-winners/" target="_blank">*G-Research*</a>.
 - **[Nov. 2023]** Paper <a href="https://openreview.net/forum?id=wErWEsPY8g" target="_blank">*Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs*</a> accepted by <a href="https://dlde-2023.github.io/" target="_blank"> The Symbiosis of Deep Learning and Differential Equations DLDE III, NeurIPS 2023 Workshop</a>.
 - **[Jun. 2023]** Attended <a href="https://l4dc.seas.upenn.edu/" target="_blank">*The 5th Annual Learning for Dynamics and Control Conference*</a> in the University of Pennsylvania, Philadelphia, US.

@@ -13,9 +13,8 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 ## Research Interests
 - **Neural ODEs**
-- **Reinforcement Learning**
 - **Optimal Control**
-- **Robustness &amp; Stability of Machine Learning**
+- **Robustness &amp; Stability**
 
 
 ## News

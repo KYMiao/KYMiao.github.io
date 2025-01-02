@@ -4,7 +4,8 @@ layout: homepage
 
 ## About Me
 
-I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_blank"> Department of Engineering Science </a> at <a href="https://www.ox.ac.uk/" target="_blank"> University of Oxford </a>, as a member of the <a href="https://eng.ox.ac.uk/control/" target="_blank">Control Engineering Group</a>, under the supervision of Prof. <a href="https://sysos.eng.ox.ac.uk/wiki/index.php/User:Antonis" target="_blank">Antonis Papachristodoulou</a> and Dr. <a href="https://kgatsis.github.io/" target="_blank">Konstantinos Gatsis</a>. My research involves connecting Control and Machine Learning.
+I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_blank"> Department of Engineering Science </a> at <a href="https://www.ox.ac.uk/" target="_blank"> University of Oxford </a>, as a member of the <a href="https://eng.ox.ac.uk/control/" target="_blank">Control Engineering Group</a>, under the supervision of Prof. <a href="https://sysos.eng.ox.ac.uk/wiki/index.php/User:Antonis" target="_blank">Antonis Papachristodoulou</a> and Dr. <a href="https://kgatsis.github.io/" target="_blank">Konstantinos Gatsis</a>. 
+% My research involves connecting Control and Machine Learning.%
 
 Prior to joining the DPhil program, I obtained my master's degree in Control Systems from <a href="https://www.imperial.ac.uk/" target="_blank"> Imperial College London </a>, under the supervision of Professor <a href="https://www.imperial.ac.uk/people/r.vinter" target="_blank">Richard Vinter</a>, and my BEng degree in Detection, Guidance and Control from <a href="https://en.nwpu.edu.cn/" target="_blank"> Northwestern Polytechnical University</a>.
 

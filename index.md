@@ -18,6 +18,10 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## News
+- **[Jun. 2025]** Attended <a href="https://sites.google.com/umich.edu/l4dc2025/" target="_blank">*The 7th Annual Learning for Dynamics and Control Conference*</a> in the University of Michigan, Ann Arbor, US.
+- **[Mar. 2025]** Started a 5-month research exchange fellowship at the AI Center, ETH Zurich, under the supervision of by Prof. <a href="https://las.inf.ethz.ch/krausea" target="_blank">Andreas Krause</a>, funded by <a href="https://nccr-automation.ch/" target="_blank">NCCR Automation.
+- **[Mar. 2025]** Paper <a href="https://www.sciencedirect.com/science/article/pii/S0925231225007131" target="_blank">*NLBAC: A neural ODE-based algorithm for state-wise stable and safe reinforcement learning*</a> accepted by *Neurocomputing*.
+- **[Feb. 2025]** Paper <a href="https://proceedings.mlr.press/v283/miao25a.html" target="_blank">*Opt-ODENet: Neural ODE Controller Design with Differentiable Optimization Layers for Safety and Stability*</a> published on Proceedings of Machine Learning Research. 
 - **[Jul. 2024]** Attended <a href="https://icml.cc/" target="_blank">*The Forty-first International Conference on Machine Learning*</a> at Messe Wien Exhibition Congress Center, Vienna, Austria.
 - **[Jul. 2024]** Volunteered at <a href="https://l4dc.web.ox.ac.uk/home" target="_blank">*6th Annual Learning for Dynamics & Control Conference*</a> in the University of Oxford, UK.
 - **[May. 2024]** Paper <a href="https://openreview.net/pdf?id=f6QenZyyeP" target="_blank">*How Deep Do We Need: Accelerating Training and Inference of Neural ODEs via Control Perspective*</a> published on <a href="https://proceedings.mlr.press/v235/miao24a.html" target="_blank"> Proceedings of the 41st International Conference on Machine Learning, PMLR 235:35528-35545</a>.

@@ -18,6 +18,7 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 
 
 ## News
+- **[Jun. 2025]** Gave an invited talk on Learning Dissipativity at the <a href="https://sites.google.com/ucsd.edu/soc-lab/home/co-pi-seminars" target="_blank">Co-PI Seminar</a>, University of California, San Diego (UCSD).
 - **[Jun. 2025]** Attended <a href="https://sites.google.com/umich.edu/l4dc2025/" target="_blank">*The 7th Annual Learning for Dynamics and Control Conference*</a> in the University of Michigan, Ann Arbor, US.
 - **[Mar. 2025]** Started a 5-month research exchange fellowship at the AI Center, ETH Zurich, under the supervision of by Prof. <a href="https://las.inf.ethz.ch/krausea" target="_blank">Andreas Krause</a>, funded by <a href="https://nccr-automation.ch/" target="_blank">NCCR Automation.
 - **[Mar. 2025]** Paper <a href="https://www.sciencedirect.com/science/article/pii/S0925231225007131" target="_blank">*NLBAC: A neural ODE-based algorithm for state-wise stable and safe reinforcement learning*</a> accepted by *Neurocomputing*.

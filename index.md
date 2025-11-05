@@ -14,7 +14,8 @@ Outside of academia, I am a violinist at <a href="https://www.hertford.ox.ac.uk/
 ## Research Interests
 - **Neural ODEs**
 - **Optimal Control**
-- **Robustness &amp; Stability**
+- **Robustness &amp; Stability &amp; Safety**
+- **Generative Modeling**
 
 
 ## News

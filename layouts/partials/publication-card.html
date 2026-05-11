@@ -1,0 +1,21 @@
+<article class="publication-card">
+  {{ with .Resources.GetMatch "featured.*" }}
+    <img src="{{ .RelPermalink }}" alt="{{ $.Title }} thumbnail">
+  {{ end }}
+  <div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.authors }}<p class="authors">{{ delimit . ", " }}</p>{{ end }}
+    <p class="venue">{{ .Params.publication }}{{ with .Date }} · {{ .Format "2006" }}{{ end }}</p>
+    {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+    {{ with .Params.tags }}
+      <div class="tag-row">
+        {{ range . }}<span>{{ . }}</span>{{ end }}
+      </div>
+    {{ end }}
+    {{ with .Params.links }}
+      <div class="publication-links">
+        {{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>

@@ -1,0 +1,77 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">DPhil Candidate · University of Oxford</p>
+    <h1>Keyan Miao</h1>
+    <div class="prose">{{ .Content }}</div>
+    <div class="hero-actions">
+      <a class="button primary" href="/uploads/keyan-miao-cv.pdf">Download CV</a>
+      <a class="button" href="mailto:keyan.miao@eng.ox.ac.uk">Email</a>
+      <a class="button" href="https://scholar.google.com/citations?user=HxFJ_DQAAAAJ&hl=en">Google Scholar</a>
+    </div>
+  </div>
+  <img class="avatar" src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao">
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <h2>Research Themes</h2>
+    <p>Control theory, machine learning, and continuous-time models.</p>
+  </div>
+  <div class="theme-grid">
+    <section class="research-theme">
+      <h3>Learning-based control with Guarantees</h3>
+      <p>Safe and stable controllers that combine modern learning with Lyapunov, barrier, and robustness certificates.</p>
+    </section>
+    <section class="research-theme">
+      <h3>Control-informed machine learning</h3>
+      <p>Using control perspectives to improve training, inference, and structure in continuous-depth models.</p>
+    </section>
+    <section class="research-theme">
+      <h3>Safe and reliable generative models</h3>
+      <p>Reliability constraints and safe generation for learned systems used in technical workflows.</p>
+    </section>
+    <section class="research-theme">
+      <h3>Neural ODEs and continuous-time learning</h3>
+      <p>Continuous-time learning architectures for observers, controllers, and efficient representation learning.</p>
+    </section>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <h2>Recent Publications</h2>
+    <a href="/publications/">All publications</a>
+  </div>
+  <div class="publication-list">
+    {{ range first 5 (where site.RegularPages "Section" "publications").ByDate.Reverse }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="section two-column">
+  <div>
+    <div class="section-heading">
+      <h2>Writing</h2>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="compact-list">
+      {{ range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}<span>{{ .Date.Format "Jan 2006" }}</span></a>
+      {{ end }}
+    </div>
+  </div>
+  <div>
+    <div class="section-heading">
+      <h2>Photography</h2>
+      <a href="/photography/">Series</a>
+    </div>
+    <div class="compact-list">
+      {{ range first 4 (where site.RegularPages "Section" "photography").ByDate.Reverse }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}<span>{{ .Params.place }}</span></a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

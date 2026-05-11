@@ -1,177 +1,119 @@
-<!-- # The Minimal Light Theme
+# Keyan Miao Academic Website
 
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
+This repository contains the source for `https://kymiao.github.io`, rebuilt with HugoBlox Academic CV.
 
-\[[Demo the theme](https://minimal-light-theme.yliu.me/)\]  \[[简体中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hans.md) | [繁體中文](https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hant.md) | [Deutsche](https://github.com/yaoyao-liu/minimal-light/blob/master/README_de.md)\]
- 
-*This is the source code of my homepage. I build this website based on [minimal](https://github.com/orderedlist/minimal).*
-<br>
-*Feel free to use and share the source code anywhere you like.*
+The site uses real multi-page navigation for Home, Research, Publications, Projects, Blog, Photography, and CV. Existing useful assets from the previous Jekyll site have been preserved, with Hugo-facing copies placed in `static/uploads/`.
 
-The latest version of my homepage is available here: [[link](https://github.com/yaoyao-liu/yaoyao-liu.github.io)]
-<br>
-A template for Max Planck Institute for Informatics is available here: [[link](https://github.com/yaoyao-liu/minimal-light-theme-mpi-inf)]
+## Local Preview
 
-## Features
+Install Hugo Extended. The template version is pinned in `hugoblox.yaml`.
 
-- Simple and elegant personal homepage theme
-- Jekyll theme, automatically deployed by GitHub Pages
-- Basic search engine optimization
-- Mobile friendly
-- Supporting Markdown 
-- Supporting dark mode
-
-## Project Architecture
-
-```
-.
-├── _includes                    # the Markdown files for publications and services  
-├── _layouts                  
-|   └── homepage.html            #  the html template for the homepage 
-├── _sass                     
-|   └── minimal-light.scss       #  this file will be compiled into a CSS file to control the style of the page
-├── assets                       #  some files
-├── .gitignore                   #  this file specifies intentionally untracked files that Git should ignore
-├── CNAME                        #  the custom domain, will be used by GitHub page sevice
-├── Gemfile                      #  a RubyGems related file
-├── LICENSE                      #  the license file
-├── README.md                    #  the readme file (English)
-├── README_de.md                 #  the readme file (German)
-├── README_zh_Hans.md            #  the readme file (Simplified Chinese)
-├── README_zh_Hant.md            #  the readme file (Traditional Chinese)
-├── _config.yml                  #  the Jekyll configuration file, including some options of the page  
-└── index.md                     #  the content of the index page, using Markdown
+```bash
+hugo version
+hugo server --disableFastRender
 ```
 
-## Usage
+Then open `http://localhost:1313`.
 
-### Using on GitHub 
+If you prefer npm scripts:
 
-To use this theme, add the following to your repository's `_config.yml`:
+```bash
+npm run dev
+```
+
+## Adding a New Publication
+
+1. Add a BibTeX entry to `data/publications.bib`.
+2. Optionally add polish in `data/publication_overrides.json`: `venue`, `summary`, `tags`, `links`, `image`, or `featured`.
+3. Regenerate publication pages:
+
+```bash
+python3 scripts/update_publications.py
+```
+
+Generated pages appear in `content/publications/<paper-slug>/` with an `index.md` and `cite.bib`.
+
+## Updating Publications from BibTeX, DOI, ORCID, or Crossref
+
+The stable default pipeline is BibTeX plus manual overrides:
+
+```bash
+python3 scripts/update_publications.py --bib data/publications.bib
+```
+
+For DOI metadata, add `doi = {...}` to a BibTeX entry and run:
+
+```bash
+python3 scripts/update_publications.py --enrich-doi
+```
+
+This performs best-effort Crossref lookup. The generated pages still remain editable through the JSON override file.
+
+For ORCID, export BibTeX from ORCID or use an ORCID-to-BibTeX tool, save it into `data/publications.bib`, then run the same script. This keeps ORCID as an input source without making the website build depend on live ORCID availability.
+
+Google Scholar import is not the default because direct scraping is fragile and can be blocked or break without notice. If you later add a Scholar importer, keep it optional, cache its output as BibTeX or JSON, and commit the cached source file.
+
+## Adding a Blog Post
+
+Create a new bundle:
+
+```bash
+hugo new blog/my-note/index.md
+```
+
+Use front matter like:
 
 ```yaml
-remote_theme: yaoyao-liu/minimal-light
+---
+title: "My Note"
+date: 2026-05-11
+summary: "A short description."
+tags: ["research notes"]
+draft: false
+---
 ```
 
-Please note that adding the above line will directly apply all the default settings in this repository to yours.
+Blog posts live under `content/blog/` and are listed at `/blog/`.
 
-If you hope to edit any files (e.g., `index.md`), you still need to copy them to your repository.
+## Adding a Photography Series
 
-You may also fork this repository (or [use this repository as a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) and change the name to `your-username.github.io`.
-
-Then you need to enable the GitHub pages for that repository following the steps [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site).
-
-### Using Locally with Jekyll
-
-*You need to install [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/) fisrt.*
-
-Clone this repository:
+Create a new series:
 
 ```bash
-git clone https://github.com/yaoyao-liu/minimal-light.git
-cd minimal-light
+hugo new photography/my-series/index.md
 ```
-Install and run:
+
+Each series supports `cover`, `title`, `place`, `series_date`, `caption`, `camera`, `film`, and `gallery`.
+
+Put images in `static/uploads/photography/<series>/`, then reference them as `/uploads/photography/<series>/image.jpg`.
+
+Example gallery front matter:
+
+```yaml
+gallery:
+  - src: "/uploads/photography/oxford/morning.jpg"
+    alt: "Morning light in Oxford"
+```
+
+Gallery images open directly in a new tab, which gives a simple no-JavaScript lightbox fallback. A richer lightbox can be added later by replacing `layouts/_default/photography.html`.
+
+## Deployment to GitHub Pages
+
+Deployment is handled by `.github/workflows/deploy.yml`.
+
+1. Keep the custom domain in `CNAME` as `kymiao.github.io`.
+2. In GitHub repository settings, set Pages source to GitHub Actions.
+3. Merge changes into `main`.
+4. The workflow builds Hugo and deploys `public/` to GitHub Pages.
+
+## Branch and Pull Request Workflow
+
+Do not push directly to `main`.
 
 ```bash
-bundle install
-bundle exec jekyll server
+git switch -c rebuild-hugoblox-academic-cv
+git add .
+git commit -m "Rebuild site with HugoBlox Academic CV"
+git push -u origin rebuild-hugoblox-academic-cv
+gh pr create --base main --head rebuild-hugoblox-academic-cv --title "Rebuild site with HugoBlox Academic CV" --body "Rebuilds the academic personal website with HugoBlox, multi-page navigation, publication generation, photography series, blog, and GitHub Pages deployment."
 ```
-View the live page using `localhost`:
-<http://localhost:4000>. You can get the html files in `_site` folder.
-
-## Customizing
-
-### Configuration variables
-
-The Minimal Light theme will respect the following variables, if set in your site's `_config.yml`:
-
-  ```yaml
-# Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
-
-# Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
-
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: files/Curriculum_Vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
-
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
-
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
-  ```
-### Editing `index.md`
-
-Create `index.md` and add your personal information (e.g., publications, research).
-
-### Stylesheet
-
-If you'd like to add your own custom styles:
-
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
-
-### Layouts
-
-If you'd like to change the theme's HTML layout:
-
-1. [Copy the original template](https://github.com/yaoyao-liu/minimal-light/blob/master/_layouts/homepage.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/homepage.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
-
-## License
-
-This work is licensed under a [Creative Commons Zero v1.0 Universal](https://github.com/yaoyao-liu/minimal-light/blob/master/LICENSE) License.
-
-## Acknowledgements
-
-Our project uses the source code from the following repositories:
-
-* [pages-themes/minimal](https://github.com/pages-themes/minimal)
-
-* [orderedlist/minimal](https://github.com/orderedlist/minimal)
-
-* [al-folio](https://github.com/alshedivat/al-folio) -->
-
-## Acknowledgements
-
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
-
-This project mostly uses the source code from Yao Yao Liu's [minimal-light](https://github.com/yaoyao-liu/minimal-light.git) theme. We thank Yao Yao Liu for his great work and encourage everyone to try this theme.
-
-Our project uses the source code from the following repositories:
-
-* [minimal-light theme](https://github.com/yaoyao-liu/minimal-light.git)
-
-* [pages-themes/minimal](https://github.com/pages-themes/minimal)
-
-* [orderedlist/minimal](https://github.com/orderedlist/minimal)
-
-* [al-folio](https://github.com/alshedivat/al-folio)
-  

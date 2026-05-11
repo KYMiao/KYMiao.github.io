@@ -1,0 +1,32 @@
+title: "Keyan Miao"
+baseURL: "https://kymiao.github.io/"
+languageCode: "en-us"
+defaultContentLanguage: en
+hasCJKLanguage: false
+enableRobotsTXT: true
+enableEmoji: true
+summaryLength: 28
+pagination:
+  pagerSize: 12
+
+outputs:
+  home: [HTML, RSS, headers, redirects, backlinks]
+  section: [HTML, RSS]
+
+taxonomies:
+  tag: tags
+  category: categories
+  publication_type: publication_types
+  author: authors
+
+markup:
+  _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    lineNos: false
+
+imaging:
+  resampleFilter: lanczos
+  quality: 90

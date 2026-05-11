@@ -1,0 +1,79 @@
+:root {
+  --km-ink: #1f2933;
+  --km-muted: #5f6f7a;
+  --km-line: rgba(54, 92, 111, 0.18);
+  --km-wash: #f6f4ef;
+  --km-accent: #365c6f;
+  --km-warm: #8f5f3f;
+}
+
+.prose a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.km-callout,
+.research-theme,
+.photo-meta,
+.publication-note {
+  border: 1px solid var(--km-line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--km-wash) 72%, white);
+  padding: 1rem;
+}
+
+.theme-grid,
+.photo-series-grid,
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.theme-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.photo-series-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-grid a,
+.photo-card {
+  display: block;
+  border: 1px solid var(--km-line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.gallery-grid img,
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card div {
+  padding: 0.85rem;
+}
+
+.photo-card h3,
+.research-theme h3 {
+  margin: 0 0 0.35rem;
+}
+
+.photo-card p,
+.research-theme p,
+.photo-meta {
+  color: var(--km-muted);
+}
+
+.publication-links a {
+  margin-right: 0.75rem;
+  white-space: nowrap;
+}

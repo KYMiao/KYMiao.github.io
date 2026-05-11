@@ -1,0 +1,68 @@
+{
+  "zhao2025nlbac": {
+    "featured": true,
+    "venue": "Neurocomputing",
+    "summary": "A Neural ODE-based reinforcement learning algorithm designed for state-wise stability and safety.",
+    "tags": ["Neural ODE", "safe control", "reinforcement learning"],
+    "links": {
+      "DOI": "https://doi.org/10.1016/j.neucom.2025.130041",
+      "Publisher": "https://www.sciencedirect.com/science/article/pii/S0925231225007131"
+    }
+  },
+  "miao2025optodenet": {
+    "featured": true,
+    "venue": "L4DC 2025",
+    "summary": "A Neural ODE controller architecture that uses differentiable QP layers to enforce safety while optimizing performance.",
+    "tags": ["Neural ODE", "safe control", "CLF", "CBF", "differentiable optimization"],
+    "image": "/uploads/publications/towards-optimal-depths.jpg",
+    "links": {
+      "PDF": "https://raw.githubusercontent.com/mlresearch/v283/main/assets/miao25a/miao25a.pdf",
+      "PMLR": "https://proceedings.mlr.press/v283/miao25a.html"
+    }
+  },
+  "miao2024how": {
+    "featured": true,
+    "venue": "ICML 2024",
+    "summary": "A control perspective on Neural ODE depth and terminal time for faster training and inference.",
+    "tags": ["Neural ODE", "optimal control", "continuous-time learning"],
+    "image": "/uploads/publications/towards-optimal-depths.jpg",
+    "links": {
+      "PDF": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/miao24a/miao24a.pdf",
+      "PMLR": "https://proceedings.mlr.press/v235/miao24a.html",
+      "OpenReview": "https://openreview.net/forum?id=f6QenZyyeP"
+    }
+  },
+  "miao2023towards": {
+    "featured": false,
+    "venue": "NeurIPS DLDE III Workshop 2023",
+    "summary": "A workshop version exploring control-inspired acceleration for Neural ODE training and inference.",
+    "tags": ["Neural ODE", "optimal control"],
+    "image": "/uploads/publications/towards-optimal-depths.jpg",
+    "links": {
+      "PDF": "https://openreview.net/pdf?id=wErWEsPY8g",
+      "OpenReview": "https://openreview.net/forum?id=wErWEsPY8g"
+    }
+  },
+  "miao2023observers": {
+    "featured": true,
+    "venue": "L4DC 2023",
+    "summary": "Learning Luenberger-like and KKL observers for nonlinear systems using Neural ODEs.",
+    "tags": ["Neural ODE", "observers", "robustness"],
+    "image": "/uploads/publications/learning-robust-observers.jpg",
+    "links": {
+      "PDF": "https://proceedings.mlr.press/v211/miao23a/miao23a.pdf",
+      "PMLR": "https://proceedings.mlr.press/v211/miao23a.html"
+    }
+  },
+  "miao2021growth": {
+    "featured": false,
+    "venue": "Optimal Control Applications and Methods",
+    "summary": "An optimal control study of a growth and consumption model.",
+    "tags": ["optimal control"],
+    "image": "/uploads/publications/growth-consumption.jpg",
+    "links": {
+      "DOI": "https://doi.org/10.1002/oca.2754",
+      "Publisher": "https://onlinelibrary.wiley.com/doi/full/10.1002/oca.2754"
+    }
+  }
+}

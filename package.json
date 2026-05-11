@@ -1,0 +1,11 @@
+{
+  "name": "kymiao-academic-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --minify",
+    "update:publications": "python3 scripts/update_publications.py",
+    "update:publications:doi": "python3 scripts/update_publications.py --enrich-doi"
+  }
+}

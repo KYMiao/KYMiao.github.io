@@ -5,7 +5,7 @@ cms_exclude: true
 view: citation
 ---
 
-Publications are generated from `data/publications.bib` and optional manual polish in `data/publication_overrides.json`. Use:
+Publications are generated from `assets/publications/publications.bib` and optional manual polish in `data/publication_overrides.json`. Use:
 
 ```bash
 python3 scripts/update_publications.py

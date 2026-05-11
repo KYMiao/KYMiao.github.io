@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Generate HugoBlox publication pages from BibTeX plus JSON overrides.
 
-The default source of truth is data/publications.bib. Optional DOI enrichment
-uses Crossref and is intentionally best-effort so local builds remain stable.
+The default source of truth is assets/publications/publications.bib. Optional
+DOI enrichment uses Crossref and is intentionally best-effort so local builds
+remain stable.
 """
 
 from __future__ import annotations
@@ -16,7 +17,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BIB_PATH = ROOT / "data" / "publications.bib"
+BIB_PATH = ROOT / "assets" / "publications" / "publications.bib"
 OVERRIDES_PATH = ROOT / "data" / "publication_overrides.json"
 OUT_DIR = ROOT / "content" / "publications"
 

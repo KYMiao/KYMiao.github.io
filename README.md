@@ -23,7 +23,7 @@ npm run dev
 
 ## Adding a New Publication
 
-1. Add a BibTeX entry to `data/publications.bib`.
+1. Add a BibTeX entry to `assets/publications/publications.bib`.
 2. Optionally add polish in `data/publication_overrides.json`: `venue`, `summary`, `tags`, `links`, `image`, or `featured`.
 3. Regenerate publication pages:
 
@@ -38,7 +38,7 @@ Generated pages appear in `content/publications/<paper-slug>/` with an `index.md
 The stable default pipeline is BibTeX plus manual overrides:
 
 ```bash
-python3 scripts/update_publications.py --bib data/publications.bib
+python3 scripts/update_publications.py --bib assets/publications/publications.bib
 ```
 
 For DOI metadata, add `doi = {...}` to a BibTeX entry and run:
@@ -49,7 +49,7 @@ python3 scripts/update_publications.py --enrich-doi
 
 This performs best-effort Crossref lookup. The generated pages still remain editable through the JSON override file.
 
-For ORCID, export BibTeX from ORCID or use an ORCID-to-BibTeX tool, save it into `data/publications.bib`, then run the same script. This keeps ORCID as an input source without making the website build depend on live ORCID availability.
+For ORCID, export BibTeX from ORCID or use an ORCID-to-BibTeX tool, save it into `assets/publications/publications.bib`, then run the same script. This keeps ORCID as an input source without making the website build depend on live ORCID availability.
 
 Google Scholar import is not the default because direct scraping is fragile and can be blocked or break without notice. If you later add a Scholar importer, keep it optional, cache its output as BibTeX or JSON, and commit the cached source file.
 

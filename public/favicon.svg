@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .line {
+      fill: none;
+      stroke: #201d1d;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .face {
+      fill: #201d1d;
+    }
+    @media (prefers-color-scheme: dark) {
+      .line {
+        stroke: #d6b9b4;
+      }
+      .face {
+        fill: #d6b9b4;
+      }
+    }
+  </style>
+  <path class="line" d="M14.3 28.2 9.9 13.2l14 8.3a24.5 24.5 0 0 1 16.2 0l14-8.3-4.4 15c4 3.2 6.3 7.5 6.3 12.2 0 9-10.7 14-24 14s-24-5-24-14c0-4.7 2.3-9 6.3-12.2Z"/>
+  <path class="line" d="M17.6 24.4 13.9 17l7.2 5.1M46.4 24.4 50.1 17l-7.2 5.1"/>
+  <path class="line" d="M22.5 40.8c-4.4-1.2-8.3-1.4-12.2-.6M22.7 44.5c-4.1.5-7.7 1.7-10.8 3.7M41.5 40.8c4.4-1.2 8.3-1.4 12.2-.6M41.3 44.5c4.1.5 7.7 1.7 10.8 3.7"/>
+  <circle class="face" cx="24.2" cy="35.4" r="2.4"/>
+  <circle class="face" cx="39.8" cy="35.4" r="2.4"/>
+  <path class="face" d="M30.2 41.4c.9-.9 2.7-.9 3.6 0-.6 1.2-3 1.2-3.6 0Z"/>
+  <path class="line" d="M32 42.5v2.1M32 44.6c-1.5 1.8-4.4 1.8-5.7.2M32 44.6c1.5 1.8 4.4 1.8 5.7.2"/>
+</svg>

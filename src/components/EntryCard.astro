@@ -1,0 +1,19 @@
+---
+import { formatDate, slugFor } from "../lib/content";
+
+const { entry, section } = Astro.props;
+const data = entry.data;
+const slug = slugFor(entry);
+const href = `/${section}/${slug}/`;
+const cover = data.cover ?? "";
+---
+
+<a class={section === "photography" ? "photo-card" : "article-card"} href={href} data-reveal>
+  {cover && <img src={cover} alt={`${data.title} cover`} />}
+  <div>
+    <h2>{data.title}</h2>
+    {data.summary && <p>{data.summary}</p>}
+    {data.caption && <p>{data.caption}</p>}
+    <span>{data.place ?? formatDate(data.date, { month: "short", day: "numeric", year: "numeric" })}</span>
+  </div>
+</a>

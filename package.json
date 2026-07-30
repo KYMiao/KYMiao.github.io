@@ -1,11 +1,19 @@
 {
   "name": "kymiao-academic-website",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify",
-    "update:publications": "python3 scripts/update_publications.py",
-    "update:publications:doi": "python3 scripts/update_publications.py --enrich-doi"
-  }
+    "dev": "astro dev",
+    "prebuild": "npm run sync:assets",
+    "build": "astro build",
+    "preview": "astro preview",
+    "extract:figures": "node scripts/extract_publication_figures.mjs",
+    "sync:assets": "node scripts/sync_public_assets.mjs",
+    "sync:scholar": "python3 scripts/sync_google_scholar.py"
+  },
+  "dependencies": {
+    "astro": "^5.8.0"
+  },
+  "devDependencies": {}
 }

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+  <title id="t">Learning with constraints and guarantees</title>
+  <desc id="d">Multiple forms of constraints are incorporated into learning to produce a verified model.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f4f0eb"/><stop offset="1" stop-color="#e9e2db"/></linearGradient>
+    <linearGradient id="core" x2="1" y2="1"><stop stop-color="#f0d9d4"/><stop offset="1" stop-color="#d8e6e2"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".12"/></filter>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#706762"/></marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="url(#bg)"/>
+  <g opacity=".32" stroke="#b8aea7"><path d="M70 120h1060M70 680h1060"/><path d="M180 70v660M1020 70v660"/></g>
+  <g font-family="Arial,sans-serif" fill="#332f2d">
+    <text x="82" y="94" font-size="24" letter-spacing="3">UNCONSTRAINED SPACE</text>
+    <text x="850" y="94" font-size="24" letter-spacing="3">GUARANTEED OUTPUT</text>
+  </g>
+  <g fill="#bc7d76" opacity=".9">
+    <circle cx="120" cy="210" r="12"/><circle cx="232" cy="177" r="9"/><circle cx="166" cy="326" r="14"/>
+    <circle cx="275" cy="385" r="11"/><circle cx="112" cy="500" r="10"/><circle cx="237" cy="592" r="14"/>
+    <circle cx="322" cy="245" r="8"/><circle cx="330" cy="540" r="9"/>
+  </g>
+  <g fill="none" stroke="#bc7d76" stroke-width="2" opacity=".55"><path d="m120 210 112-33 90 68-156 81 109 59-163 115 125 92 93-52"/></g>
+  <path d="M350 400h90" stroke="#706762" stroke-width="4" marker-end="url(#a)"/>
+  <g filter="url(#shadow)">
+    <rect x="466" y="160" width="315" height="480" rx="44" fill="url(#core)" stroke="#756c67" stroke-width="3"/>
+    <ellipse cx="624" cy="400" rx="112" ry="142" fill="#f8f5f1" stroke="#756c67" stroke-width="3"/>
+    <path d="M540 445c48-112 112-105 168-38" fill="none" stroke="#647f78" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#647f78"><circle cx="557" cy="416" r="10"/><circle cx="596" cy="365" r="10"/><circle cx="644" cy="357" r="10"/><circle cx="690" cy="395" r="10"/></g>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="21" fill="#332f2d" text-anchor="middle">
+    <g><rect x="410" y="112" width="180" height="58" rx="29" fill="#dbe7e4" stroke="#78938d"/><text x="500" y="149">structure</text></g>
+    <g><rect x="658" y="112" width="180" height="58" rx="29" fill="#eadbd2" stroke="#a9826f"/><text x="748" y="149">optimization</text></g>
+    <g><rect x="374" y="650" width="180" height="58" rx="29" fill="#e3dce7" stroke="#86778e"/><text x="464" y="687">verification</text></g>
+    <g><rect x="692" y="650" width="180" height="58" rx="29" fill="#e6e2c9" stroke="#9b9160"/><text x="782" y="687">regularization</text></g>
+    <text x="624" y="423" font-size="28" font-weight="700">learning</text>
+  </g>
+  <g stroke="#706762" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M500 170 548 255"/><path d="M748 170 700 255"/><path d="M464 650 540 548"/><path d="M782 650 706 548"/>
+  </g>
+  <path d="M807 400h83" stroke="#706762" stroke-width="4" marker-end="url(#a)"/>
+  <g filter="url(#shadow)">
+    <path d="M995 240c72 42 103 47 103 47v120c0 87-49 133-103 162-54-29-103-75-103-162V287s31-5 103-47Z" fill="#dbe7df" stroke="#5f7867" stroke-width="4"/>
+    <path d="m950 401 31 32 63-75" fill="none" stroke="#5f7867" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="995" y="623" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#332f2d">verified model</text>
+</svg>

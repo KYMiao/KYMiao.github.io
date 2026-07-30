@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntryCard from "../../components/EntryCard.astro";
+import { byDateDesc, visibleEntries } from "../../lib/content";
+
+const posts = byDateDesc(visibleEntries(await getCollection("blog")));
+---
+
+<BaseLayout title="Blog" description="Research notes, technical notes, and random thoughts.">
+  <section class="archive-hero" data-reveal>
+    <p class="eyebrow">Notebook</p>
+    <h1>Blog</h1>
+    <div class="archive-meta">
+      <span>{posts.length} public notes</span>
+      <span>Research notes, technical notes, and random thoughts</span>
+    </div>
+  </section>
+
+  <section class="archive-shell" data-reveal>
+    <aside>
+      <p>Technical notes, research reflections, and random thoughts live here once they are ready to be read outside the notebook.</p>
+    </aside>
+    {posts.length > 0 ? (
+      <div class="article-grid">
+        {posts.map((entry) => <EntryCard entry={entry} section="blog" />)}
+      </div>
+    ) : (
+      <div class="prose">
+        <p>Notes are being drafted and will appear here when they are ready.</p>
+      </div>
+    )}
+  </section>
+</BaseLayout>

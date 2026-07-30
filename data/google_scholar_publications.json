@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Learning robust state observers using neural odes",
+    "authors": "K Miao, K Gatsis",
+    "publication": "Learning for Dynamics and Control Conference, 208-219, 2023",
+    "year": "2023",
+    "citations": "32",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:u-x6o8ySG0sC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "NLBAC: A neural ODE-based algorithm for state-wise stable and safe reinforcement learning",
+    "authors": "L Zhao, K Miao, H Cao, K Gatsis, A Papachristodoulou",
+    "publication": "Neurocomputing 638, 130041, 2025",
+    "year": "2025",
+    "citations": "14",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:LkGwnXOMwfcC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Data-enabled predictive control for nonlinear systems based on a Koopman bilinear realization",
+    "authors": "Z Xiong, Z Yuan, K Miao, H Wang, J Cortés, A Papachristodoulou",
+    "publication": "2025 IEEE 64th Conference on Decision and Control (CDC), 6498-6503, 2025",
+    "year": "2025",
+    "citations": "12",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:roLk4NBRz8UC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Optimal control of a growth/consumption model",
+    "authors": "K Miao, R Vinter",
+    "publication": "Optimal Control Applications and Methods 42 (6), 1672-1688, 2021",
+    "year": "2021",
+    "citations": "8",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:u5HHmVD_uO8C",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "How deep do we need: Accelerating training and inference of neural ODEs via control perspective",
+    "authors": "K Miao, K Gatsis",
+    "publication": "Proceedings of the 41st International Conference on Machine Learning 235 …, 2024",
+    "year": "2024",
+    "citations": "4",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:kNdYIx-mwKoC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Designing neural controllers with optimality and stability guarantees by learning input-output dissipativity",
+    "authors": "H Wang*, K Miao*, DS Madeira, A Papachristodoulou",
+    "publication": "Automatica 191, 113120, 2026",
+    "year": "2026",
+    "citations": "3",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:Zph67rFs4hoC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Learning Koopman representations with controllability guarantees",
+    "authors": "K Miao, H Wang, X Ding, K Gatsis, A Krause, A Papachristodoulou",
+    "publication": "The Fourteenth International Conference on Learning Representations, 2026",
+    "year": "2026",
+    "citations": "1",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:KlAtU1dfN6UC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Opt-ODENet: Neural ODE controller design with differentiable optimization layers for safety and stability",
+    "authors": "K Miao, L Zhao, H Wang, K Gatsis, A Papachristodoulou",
+    "publication": "7th Annual Learning for Dynamics & Control Conference, Ann Arbor, MI, USA …, 2025",
+    "year": "2025",
+    "citations": "1",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:Se3iqnhoufwC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Opt-ODENet: A neural ODE framework with differentiable QP layers for safe and stable control design (longer version)",
+    "authors": "K Miao, L Zhao, H Wang, K Gatsis, A Papachristodoulou",
+    "publication": "arXiv preprint arXiv:2504.17139, 2025",
+    "year": "2025",
+    "citations": "1",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:ufrVoPGSRksC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "Towards Optimal Network Depths: Control-Inspired Acceleration of Training and Inference in Neural ODEs",
+    "authors": "K Miao, K Gatsis",
+    "publication": "The Symbiosis of Deep Learning and Differential Equations III, 2023",
+    "year": "2023",
+    "citations": "1",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:d1gkVwhDpl0C",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  },
+  {
+    "title": "NLBAC: A Neural Ordinary Differential Equations-based Framework for Stable and Safe Reinforcement Learning",
+    "authors": "L Zhao, K Miao, K Gatsis, A Papachristodoulou",
+    "publication": "arXiv preprint arXiv:2401.13148, 2024",
+    "year": "2024",
+    "citations": "",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HxFJ_DQAAAAJ&pagesize=100&citation_for_view=HxFJ_DQAAAAJ:5nxA0vEk-isC",
+    "source": "Google Scholar",
+    "synced_at": "2026-07-30T00:26:05Z"
+  }
+]

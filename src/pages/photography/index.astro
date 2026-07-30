@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { slugFor, visibleEntries } from "../../lib/content";
+
+const sortPhotography = (entries) =>
+  [...entries].sort((a, b) => {
+    const aOrder = Number.isFinite(a.data.order) ? Number(a.data.order) : Number.POSITIVE_INFINITY;
+    const bOrder = Number.isFinite(b.data.order) ? Number(b.data.order) : Number.POSITIVE_INFINITY;
+
+    if (aOrder !== bOrder) {
+      return aOrder - bOrder;
+    }
+
+    const aTime = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const bTime = b.data.date ? new Date(b.data.date).getTime() : 0;
+    return bTime - aTime;
+  });
+
+const photographyEntries = await getCollection("photography");
+const photographyIndex = photographyEntries.find((entry) => entry.id === "page.md" || entry.id === "page");
+const series = sortPhotography(visibleEntries(photographyEntries));
+const featured = series[0];
+const featuredSlug = featured ? slugFor(featured) : "";
+const heroCover = photographyIndex?.data.cover ?? featured?.data.cover ?? "/uploads/photography/placeholder.svg";
+const heroHref = photographyIndex?.data.cover_href ?? (featured ? `/photography/${featuredSlug}/` : "/photography/");
+const heroPlace = photographyIndex?.data.cover_label ?? featured?.data.place ?? "Photography";
+const heroTitle = photographyIndex?.data.cover_title ?? featured?.data.title ?? "Photography";
+const heroAlt = photographyIndex?.data.cover_alt ?? `${heroTitle} cover`;
+---
+
+<BaseLayout title="Photography" description="Photography series and travel notes." bodyClass="photo-page" bodyStyle={`--photo-bg: url('${heroCover}')`}>
+  <section class="photo-atelier" data-reveal>
+    <div class="photo-hero-copy">
+      <p class="eyebrow">Field Notes / Photography</p>
+      <h1>Light, cities, and the intervals around research.</h1>
+      <p>Conference travel, Oxford seasons, film experiments, and the quieter images that sit between deadlines.</p>
+      <div class="photo-hero-meta">
+        <span>{series.length} series</span>
+        <span>Digital · film · travel notes</span>
+      </div>
+    </div>
+    {series.length > 0 && (
+      <a class="photo-hero-frame" href={heroHref}>
+        <img src={heroCover} alt={heroAlt} />
+        <div>
+          <span>{heroPlace}</span>
+          <strong>{heroTitle}</strong>
+        </div>
+      </a>
+    )}
+  </section>
+
+  <section class="photo-index" data-reveal>
+    <div class="photo-index-heading">
+      <p class="eyebrow">Series Index</p>
+      <p>Organized like a contact sheet: each series opens into a small visual notebook with place, time, and image notes.</p>
+    </div>
+    <div class="photo-contact-sheet">
+      {series.map((entry, index) => {
+        const data = entry.data;
+        return (
+          <a class="photo-series-tile" href={`/photography/${slugFor(entry)}/`}>
+            <span class="photo-number">{String(index + 1).padStart(2, "0")}</span>
+            <img src={data.cover} alt={`${data.title} cover`} />
+            <div class="photo-tile-copy">
+              <p>{data.place}</p>
+              <h2>{data.title}</h2>
+              <span>{data.caption}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+</BaseLayout>

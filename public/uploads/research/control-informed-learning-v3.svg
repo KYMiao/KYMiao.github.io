@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Control-informed learning</title>
+  <desc id="desc">Feedback from a control perspective makes learning dynamics more stable and efficient.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#746b66"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="32" fill="#f2eee9"/>
+  <text x="92" y="112" fill="#312d2b" font-family="Arial, sans-serif" font-size="30" font-weight="600">learning dynamics</text>
+  <rect x="90" y="160" width="500" height="430" rx="24" fill="#ebe4dc" stroke="#746b66" stroke-width="4"/>
+  <path d="M130 495C180 220 235 545 290 280S390 540 445 338 515 430 550 305" fill="none" stroke="#b27670" stroke-width="9" stroke-linecap="round"/>
+  <path d="M610 375H710" fill="none" stroke="#746b66" stroke-width="5" marker-end="url(#arrow)"/>
+  <circle cx="770" cy="375" r="66" fill="#d9e3e1" stroke="#657f7c" stroke-width="5"/>
+  <path d="M737 375h66M770 342v66" stroke="#657f7c" stroke-width="5" stroke-linecap="round"/>
+  <text x="674" y="492" fill="#312d2b" font-family="Arial, sans-serif" font-size="28" font-weight="600">control perspective</text>
+  <path d="M830 375H930" fill="none" stroke="#746b66" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="950" y="160" width="160" height="430" rx="24" fill="#e1e8dd" stroke="#5f7867" stroke-width="4"/>
+  <path d="M980 250C1005 430 1020 470 1080 495" fill="none" stroke="#5f7867" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="1080" cy="495" r="12" fill="#5f7867"/>
+  <path d="M770 308V198C770 152 730 134 682 134H388" fill="none" stroke="#657f7c" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="947" y="652" fill="#312d2b" font-family="Arial, sans-serif" font-size="27" font-weight="600">stable</text>
+  <text x="947" y="690" fill="#312d2b" font-family="Arial, sans-serif" font-size="27" font-weight="600">efficient</text>
+</svg>

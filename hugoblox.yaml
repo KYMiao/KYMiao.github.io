@@ -1,6 +1,0 @@
-build:
-  hugo_version: "0.136.5"
-  hugo_extended: true
-
-publish:
-  domain: "https://kymiao.github.io"

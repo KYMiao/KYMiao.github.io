@@ -1,0 +1,91 @@
+---
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { slugFor, yearOf } from "../lib/content";
+
+const { entry, compact = false } = Astro.props;
+const data = entry.data;
+const slug = slugFor(entry);
+const image = data.image?.filename ? `/publications/${slug}/${data.image.filename}` : "";
+const links = data.links ?? [];
+const tags = data.tags ?? [];
+const summary = data.summary && data.summary !== data.publication ? data.summary : "";
+const publication = data.publication ?? "";
+const year = data.date ? yearOf(data.date) : "";
+const lowerPublication = publication.toLowerCase();
+const linkByName = new Map(links.map((link) => [String(link.name).toLowerCase(), link.url]));
+const bibPath = join(process.cwd(), "src/content/publications", slug, "cite.bib");
+const hasBib = existsSync(bibPath);
+
+function venueLabel(value) {
+  if (!value) return year || "Paper";
+  if (value.includes("International Conference on Learning Representations")) return `ICLR ${year}`;
+  if (value.includes("Learning for Dynamics") || value.includes("L4DC")) return `L4DC ${year}`;
+  if (value.includes("International Conference on Machine Learning")) return `ICML ${year}`;
+  if (value.includes("Conference on Decision and Control") || value.includes("CDC")) return `CDC ${year}`;
+  if (value.includes("NeurIPS") || value.includes("DLDE")) return "NeurIPS DLDE";
+  if (value.includes("Neurocomputing")) return "Neurocomputing";
+  if (value.includes("Automatica")) return "Automatica";
+  if (value.includes("Optimal Control Applications")) return "OCAM";
+  if (value.includes("arXiv")) return "arXiv";
+  return year ? `Paper ${year}` : "Paper";
+}
+
+const status = data.status ?? (
+  lowerPublication.includes("arxiv")
+    ? "Preprint"
+    : Number(year) >= 2026
+      ? "Accepted"
+      : "Published"
+);
+const pdfUrl =
+  linkByName.get("pdf") ??
+  linkByName.get("paper pdf");
+const pageLink =
+  links.find((link) => ["project page", "paper page", "pmlr", "openreview", "publisher", "doi", "arxiv"].includes(String(link.name).toLowerCase()));
+const scholarUrl = linkByName.get("google scholar");
+const bibUrl = `/publications/${slug}/cite.bib`;
+const buttonLinks = [
+  pdfUrl && { name: "PDF", url: pdfUrl, icon: "pdf" },
+  pageLink && { name: pageLink.name, url: pageLink.url, icon: "external" },
+  hasBib && { name: "BibTeX", url: bibUrl, icon: "bib" },
+  scholarUrl && { name: "Scholar", url: scholarUrl, icon: "scholar" },
+].filter(Boolean);
+---
+
+<article class:list={["publication-card", { "has-image": image, compact }]} data-reveal>
+  {image && (
+    <a class="publication-media" href={`/publications/${slug}/`} aria-label={`Open ${data.title}`}>
+      <span>{venueLabel(publication)}</span>
+      <img src={image} alt={`${data.title} thumbnail`} />
+    </a>
+  )}
+  <div>
+    <h3><a href={`/publications/${slug}/`}>{data.title}</a></h3>
+    {data.authors && <p class="authors">{data.authors.join(", ")}</p>}
+    <p class="venue">{publication}</p>
+    {summary && <p>{summary}</p>}
+    {!summary && !data.publication && <slot />}
+    {tags.length > 0 && (
+      <div class="tag-row">
+        {tags.map((tag) => <span>{tag}</span>)}
+      </div>
+    )}
+    {buttonLinks.length > 0 && (
+      <div class="publication-links">
+        {buttonLinks.map((link) => (
+          <a href={link.url}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              {link.icon === "pdf" && <path d="M6 2h8l4 4v16H6V2Zm7 1.8V7h3.2L13 3.8ZM8 11h8v1.7H8V11Zm0 3.2h8v1.7H8v-1.7Zm0 3.2h5.5v1.7H8v-1.7Z" />}
+              {link.icon === "external" && <path d="M6 5h6v2H8v9h9v-4h2v6H6V5Zm8 0h5v5h-2V8.4l-6.3 6.3-1.4-1.4L15.6 7H14V5Z" />}
+              {link.icon === "bib" && <path d="M5 4h14v16H5V4Zm2 2v12h10V6H7Zm2 2h6v1.6H9V8Zm0 3h6v1.6H9V11Zm0 3h4v1.6H9V14Z" />}
+              {link.icon === "scholar" && <path d="M12 3 2 11l10 8 10-8-10-8Zm0 2.5 6.8 5.5-6.8 5.5L5.2 11 12 5.5Zm-5 11.1c1.3 2.2 3 3.4 5 3.4s3.7-1.2 5-3.4l-1.7-1c-.9 1.6-2 2.4-3.3 2.4s-2.4-.8-3.3-2.4l-1.7 1Z" />}
+            </svg>
+            {link.name}
+          </a>
+        ))}
+        <span>{status}</span>
+      </div>
+    )}
+  </div>
+</article>

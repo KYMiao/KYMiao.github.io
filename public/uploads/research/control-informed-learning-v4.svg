@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+  <title id="t">Control-informed learning</title>
+  <desc id="d">A control perspective connects models, training, and optimization to stability, efficiency, and reliability.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f2efe9"/><stop offset="1" stop-color="#e3e9e8"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".12"/></filter>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#6e6965"/></marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="url(#bg)"/>
+  <g font-family="Arial,sans-serif" fill="#332f2d">
+    <text x="80" y="92" font-size="24" letter-spacing="3">LEARNING AS A DYNAMICAL PROCESS</text>
+  </g>
+  <g filter="url(#s)" font-family="Arial,sans-serif" text-anchor="middle">
+    <g><rect x="82" y="165" width="255" height="140" rx="26" fill="#eaded8" stroke="#a57e72" stroke-width="3"/><text x="210" y="229" font-size="28" fill="#332f2d">model</text><path d="M126 268c36-65 72 55 112-8s50 22 65-35" fill="none" stroke="#a57e72" stroke-width="5"/></g>
+    <g><rect x="82" y="335" width="255" height="140" rx="26" fill="#dce7e5" stroke="#6f8d87" stroke-width="3"/><text x="210" y="399" font-size="28" fill="#332f2d">training</text><path d="M126 438c26-38 52 36 78-5s52 24 99-18" fill="none" stroke="#6f8d87" stroke-width="5"/></g>
+    <g><rect x="82" y="505" width="255" height="140" rx="26" fill="#e5dfeb" stroke="#87778e" stroke-width="3"/><text x="210" y="569" font-size="28" fill="#332f2d">optimization</text><path d="M126 610h177M145 610v-53M190 610v-82M235 610v-37M280 610v-103" stroke="#87778e" stroke-width="5"/></g>
+  </g>
+  <g stroke="#6e6965" stroke-width="4" fill="none" marker-end="url(#a)"><path d="M337 235 478 345"/><path d="M337 405 468 405"/><path d="M337 575 478 465"/></g>
+  <g filter="url(#s)">
+    <circle cx="615" cy="405" r="150" fill="#f7f4ef" stroke="#6d817d" stroke-width="4"/>
+    <circle cx="615" cy="405" r="92" fill="#d9e5e2" stroke="#6d817d" stroke-width="3"/>
+    <path d="M555 405h120M615 345v120" stroke="#6d817d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M510 350a122 122 0 0 1 190-48" fill="none" stroke="#ad815c" stroke-width="7" marker-end="url(#a)"/>
+    <text x="615" y="493" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#332f2d">control perspective</text>
+  </g>
+  <g stroke="#6e6965" stroke-width="4" fill="none" marker-end="url(#a)"><path d="M765 405H875"/></g>
+  <g filter="url(#s)" font-family="Arial,sans-serif" fill="#332f2d">
+    <rect x="898" y="175" width="220" height="470" rx="28" fill="#f7f4ef" stroke="#7b7772" stroke-width="3"/>
+    <g transform="translate(938 230)"><circle cx="28" cy="28" r="28" fill="#d9e5df"/><path d="m13 29 11 11 21-25" fill="none" stroke="#5f7867" stroke-width="6"/><text x="67" y="37" font-size="26">stability</text></g>
+    <g transform="translate(938 350)"><circle cx="28" cy="28" r="28" fill="#eadfd0"/><path d="M12 35 28 12l16 23" fill="none" stroke="#9a754f" stroke-width="6"/><text x="67" y="37" font-size="26">efficiency</text></g>
+    <g transform="translate(938 470)"><circle cx="28" cy="28" r="28" fill="#e4dce7"/><path d="M15 17h26v24H15z" fill="none" stroke="#7d6e86" stroke-width="5"/><text x="67" y="37" font-size="26">reliability</text></g>
+  </g>
+</svg>

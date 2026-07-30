@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { slugFor, visibleEntries } from "../../lib/content";
+
+export async function getStaticPaths() {
+  const entries = visibleEntries(await getCollection("photography"));
+  return entries.map((entry) => ({
+    params: { slug: slugFor(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const data = entry.data;
+const gallery = data.gallery ?? [];
+const heroImage = data.cover ?? gallery[0]?.src;
+const atmosphereImage = data.cover ?? heroImage;
+const heroCaption = `${data.title} · ${data.place}`;
+---
+
+<BaseLayout title={data.title} description={data.caption ?? data.title} bodyClass="photo-page" bodyStyle={`--photo-bg: url('${atmosphereImage}')`}>
+  <article class="photo-story" data-reveal>
+    <header class="photo-story-hero">
+      <div>
+        <p class="eyebrow">Photography{data.series_date && ` · ${data.series_date}`}</p>
+        <h1>{data.title}</h1>
+        {data.caption && <p>{data.caption}</p>}
+      </div>
+      <figure>
+        <div class="photo-frame" data-photo-frame data-photo-id={heroImage}>
+          <a href={heroImage} data-lightbox-item data-caption={heroCaption}>
+            <img src={heroImage} alt={`${data.title} opening image`} />
+          </a>
+        </div>
+        <figcaption>{data.place}</figcaption>
+      </figure>
+    </header>
+
+    <section class="photo-story-notes">
+      <aside>
+        <p>{data.place}</p>
+        {data.series_date && <p>{data.series_date}</p>}
+        {(data.camera || data.film) && <p>{[data.camera, data.film].filter(Boolean).join(" · ")}</p>}
+        <p>{gallery.length} image{gallery.length === 1 ? "" : "s"}</p>
+      </aside>
+      <div class="prose">
+        <Content />
+      </div>
+    </section>
+
+    {gallery.length > 0 && (
+      <section class="photo-gallery-wall" aria-label={`${data.title} gallery`}>
+        {gallery.map((item, index) => {
+          const shapeClass = index % 5 === 0 ? "wide" : index % 3 === 0 ? "tall" : "";
+          const caption = item.alt ?? data.title;
+          return (
+            <figure class={`photo-frame ${shapeClass}`} data-photo-frame data-photo-id={item.src}>
+              <a href={item.src} data-lightbox-item data-caption={caption}>
+                <img src={item.src} alt={caption} loading="lazy" />
+              </a>
+            </figure>
+          );
+        })}
+      </section>
+    )}
+  </article>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PublicationCard from "../../components/PublicationCard.astro";
+import { byDateDesc, visibleEntries } from "../../lib/content";
+
+const publications = byDateDesc(visibleEntries(await getCollection("publications")));
+const cards = await Promise.all(
+  publications.map(async (entry) => ({ entry, Content: (await entry.render()).Content }))
+);
+---
+
+<BaseLayout title="Publications" description="Selected papers and preprints by Keyan Miao.">
+  <section class="archive-hero" data-reveal>
+    <p class="eyebrow">Archive</p>
+    <h1>Publications</h1>
+    <div class="archive-meta">
+      <span>{publications.length} entries</span>
+      <span>Control · Learning · Reliability</span>
+    </div>
+  </section>
+
+  <section class="archive-shell" data-reveal>
+    <aside>
+      <p>Selected papers and preprints, organized as a research ledger rather than a citation dump.</p>
+    </aside>
+    <div class="publication-list">
+      {cards.map(({ entry, Content }) => <PublicationCard entry={entry}><Content /></PublicationCard>)}
+    </div>
+  </section>
+</BaseLayout>

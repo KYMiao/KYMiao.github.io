@@ -1,0 +1,62 @@
+---
+title: "Zurich 2025"
+date: 2025-07-31
+order: 2
+type: photography
+cover: "/uploads/photography/zurich/IMG_9784.PNG"
+place: "Zurich, Switzerland"
+series_date: "2025"
+caption: "Hiking, river paths, mountain air, and quiet city light."
+camera: "Nikon Zf"
+film: ""
+tags:
+  - photography
+  - zurich
+gallery:
+  - src: "/uploads/photography/zurich/DSC_4839.JPG"
+    alt: "Cat at Walensee"
+  - src: "/uploads/photography/zurich/DSC_4894.JPG"
+    alt: "Walensee"
+  - src: "/uploads/photography/zurich/DSC_4897.JPG"
+    alt: "Walensee"
+  # - src: "/uploads/photography/zurich/IMG_9784.PNG"
+  #   alt: "Walensee"
+  - src: "/uploads/photography/zurich/DSC_4996.jpg"
+    alt: "Walensee"
+  - src: "/uploads/photography/zurich/DSC_4997.jpg"
+    alt: "Walensee"
+  - src: "/uploads/photography/zurich/IMG_4346.JPG"
+    alt: "Walensee"
+  - src: "/uploads/photography/zurich/DSC_5869.jpg"
+    alt: "ETH AI Center"
+  - src: "/uploads/photography/zurich/IMG_4245.JPG"
+    alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4281.JPG"
+    alt: "Cherry Blossom"
+  # - src: "/uploads/photography/zurich/IMG_4293.JPG"
+  #   alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4298.jpg"
+    alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4301.JPG"
+    alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4318.JPG"
+    alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4320.JPG"
+    alt: "Cherry Blossom"
+  - src: "/uploads/photography/zurich/IMG_4348.JPG"
+    alt: "A soft city pause"
+  - src: "/uploads/photography/zurich/IMG_4411.jpg"
+    alt: "Lake Zurich"
+  - src: "/uploads/photography/zurich/IMG_4412.jpg"
+    alt: "Lungern"
+  - src: "/uploads/photography/zurich/IMG_4415.jpg"
+    alt: "Lungern"
+  - src: "/uploads/photography/zurich/IMG_4417.JPG"
+    alt: "Brienz"
+  - src: "/uploads/photography/zurich/IMG_4420.jpg"
+    alt: "Brienz"
+  - src: "/uploads/photography/zurich/IMG_4429.jpg"
+    alt: "Brienz"
+---
+
+Zurich and surrounding areas in a sequence of walking notes: hillside views, city edges, and small changes in light between routes.

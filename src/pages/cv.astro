@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="CV" description="CV of Keyan Miao.">
+  <section class="archive-hero" data-reveal>
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1>CV</h1>
+    <div class="archive-meta">
+      <span>PDF viewer</span>
+      <span><a href="/uploads/keyan-miao-cv.pdf">Open PDF</a></span>
+    </div>
+  </section>
+
+  <section class="cv-viewer" data-reveal>
+    <object data="/uploads/keyan-miao-cv.pdf" type="application/pdf">
+      <p>Your browser cannot display the PDF inline. <a href="/uploads/keyan-miao-cv.pdf">Open the CV PDF</a>.</p>
+    </object>
+  </section>
+</BaseLayout>

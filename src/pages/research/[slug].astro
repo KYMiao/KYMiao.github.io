@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PublicationCard from "../../components/PublicationCard.astro";
+import { byDateDesc, visibleEntries } from "../../lib/content";
+import { publicationsForDirection, researchDirections } from "../../lib/research";
+
+export function getStaticPaths() {
+  return researchDirections.map((direction) => ({
+    params: { slug: direction.slug },
+    props: { direction },
+  }));
+}
+
+const { direction } = Astro.props;
+const allPublications = byDateDesc(visibleEntries(await getCollection("publications")));
+const publications = publicationsForDirection(allPublications, direction);
+const cards = await Promise.all(
+  publications.map(async (entry) => ({ entry, Content: (await entry.render()).Content }))
+);
+---
+
+<BaseLayout title={direction.title} description={direction.summary}>
+  <article class="research-detail" data-reveal>
+    <div>
+      <p class="eyebrow">{direction.kicker}</p>
+      <h1>{direction.title}</h1>
+      <p>{direction.intro}</p>
+    </div>
+    <figure>
+      <img src={direction.image} alt={`${direction.title} visual`} />
+      {direction.imageCredit && (
+        <figcaption>
+          Image: <a href={direction.imageCredit.source} target="_blank" rel="noreferrer">{direction.imageCredit.label}</a>
+        </figcaption>
+      )}
+    </figure>
+  </article>
+
+  <section class="quiet-section" data-reveal>
+    <div class="section-kicker">
+      <p class="eyebrow">Related publications</p>
+      <a href="/publications/">All publications</a>
+    </div>
+    <div class="publication-stack">
+      {cards.map(({ entry, Content }) => <PublicationCard entry={entry}><Content /></PublicationCard>)}
+    </div>
+  </section>
+</BaseLayout>

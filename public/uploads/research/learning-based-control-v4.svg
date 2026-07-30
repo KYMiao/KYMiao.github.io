@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+  <title id="t">Learning-based control</title>
+  <desc id="d">Learning supports modeling, estimation, prediction, and control around a dynamical system.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f3efe9"/><stop offset="1" stop-color="#e5e1da"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".12"/></filter>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#6e6965"/></marker>
+  </defs>
+  <rect width="1200" height="800" rx="34" fill="url(#bg)"/>
+  <text x="78" y="92" font-family="Arial,sans-serif" font-size="24" letter-spacing="3" fill="#332f2d">LEARNING ACROSS THE CONTROL LOOP</text>
+  <g filter="url(#s)">
+    <circle cx="600" cy="405" r="145" fill="#f8f5f0" stroke="#706b67" stroke-width="4"/>
+    <path d="M525 452c38-20 43-94 91-94 47 0 50 74 88 22" fill="none" stroke="#aa765e" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="525" cy="452" r="11" fill="#aa765e"/><circle cx="616" cy="358" r="11" fill="#aa765e"/><circle cx="704" cy="380" r="11" fill="#aa765e"/>
+    <text x="600" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#332f2d">dynamical system</text>
+  </g>
+  <g font-family="Arial,sans-serif" fill="#332f2d" text-anchor="middle" filter="url(#s)">
+    <g><rect x="92" y="172" width="250" height="145" rx="25" fill="#dce8e6" stroke="#698984" stroke-width="3"/><text x="217" y="235" font-size="29">modeling</text><path d="M145 275c30-45 61 40 92-5s52 18 58-22" fill="none" stroke="#698984" stroke-width="5"/></g>
+    <g><rect x="858" y="172" width="250" height="145" rx="25" fill="#e5ddea" stroke="#82728b" stroke-width="3"/><text x="983" y="235" font-size="29">estimation</text><circle cx="946" cy="274" r="18" fill="none" stroke="#82728b" stroke-width="4"/><circle cx="1020" cy="274" r="9" fill="#82728b"/><path d="M964 274h47" stroke="#82728b" stroke-width="4"/></g>
+    <g><rect x="858" y="515" width="250" height="145" rx="25" fill="#e8dfcf" stroke="#9b7857" stroke-width="3"/><text x="983" y="578" font-size="29">prediction</text><path d="M915 622c34-50 70 12 104-30s50 3 57-19" fill="none" stroke="#9b7857" stroke-width="5" stroke-dasharray="8 6"/></g>
+    <g><rect x="92" y="515" width="250" height="145" rx="25" fill="#dfe7d9" stroke="#657d5e" stroke-width="3"/><text x="217" y="578" font-size="29">control</text><path d="M151 621h132M217 601v40" stroke="#657d5e" stroke-width="5"/></g>
+  </g>
+  <g stroke="#6e6965" stroke-width="4" fill="none" marker-end="url(#a)">
+    <path d="M342 244C430 155 493 176 535 270"/>
+    <path d="M665 270c42-94 105-115 193-26"/>
+    <path d="M983 317v198"/>
+    <path d="M858 588c-92 79-161 57-207-57"/>
+    <path d="M549 531c-46 114-115 136-207 57"/>
+    <path d="M217 515V317"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="20" fill="#6e6965">
+    <text x="442" y="182">learn representations</text><text x="747" y="182">infer hidden state</text>
+    <text x="1004" y="421">forecast</text><text x="700" y="673">plan</text><text x="386" y="673">act</text><text x="128" y="421">observe</text>
+  </g>
+</svg>

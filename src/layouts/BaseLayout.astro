@@ -1,0 +1,80 @@
+---
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+  bodyStyle?: string;
+}
+
+const {
+  title = "Keyan Miao",
+  description = "Academic website of Keyan Miao.",
+  bodyClass = "",
+  bodyStyle = "",
+} = Astro.props;
+
+const pageTitle = title === "Keyan Miao" ? title : `${title} | Keyan Miao`;
+const nav = [
+  ["Home", "/"],
+  ["Research", "/research/"],
+  ["Publications", "/publications/"],
+  ["Blog", "/blog/"],
+  ["Photography", "/photography/"],
+  ["CV", "/cv/"],
+];
+---
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/site.css?v=20260602c" />
+    <ClientRouter />
+  </head>
+  <body class={bodyClass} style={bodyStyle}>
+    <div class="opening" aria-hidden="true">
+      <div class="opening-panel">
+        <span class="opening-kicker">Control · Learning · Reliability</span>
+        <span class="opening-name">Keyan Miao</span>
+      </div>
+    </div>
+    <div class="page-wipe" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="/">Keyan Miao</a>
+      <div class="header-actions">
+        <button class="replay-opening" type="button">Replay opening</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span>Menu</span>
+          <i aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+    <nav class="menu-panel" id="site-menu" aria-label="Main navigation" tabindex="-1" aria-hidden="true" inert>
+      <div class="menu-panel-inner">
+        <p class="menu-label">Navigation</p>
+        {nav.map(([label, href]) => <a href={href}>{label}</a>)}
+      </div>
+    </nav>
+    <main id="page-content">
+      <slot />
+    </main>
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5" />
+        <path d="m5 12 7-7 7 7" />
+      </svg>
+    </button>
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} Keyan Miao. Research, writing, and field notes.</p>
+    </footer>
+    <script src="/js/site.js?v=20260602c" defer></script>
+  </body>
+</html>

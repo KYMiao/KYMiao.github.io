@@ -1,0 +1,143 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationCard from "../components/PublicationCard.astro";
+import { byDateDesc, formatDate, slugFor, visibleEntries } from "../lib/content";
+import { newsItems } from "../lib/news";
+import { researchDirections } from "../lib/research";
+
+const publications = byDateDesc(visibleEntries(await getCollection("publications"))).slice(0, 5);
+const publicationCards = await Promise.all(
+  publications.map(async (entry) => ({ entry, Content: (await entry.render()).Content }))
+);
+const posts = byDateDesc(visibleEntries(await getCollection("blog"))).slice(0, 2);
+const photos = byDateDesc(visibleEntries(await getCollection("photography"))).slice(0, 3);
+const homeNews = newsItems.slice(0, 6);
+---
+
+<BaseLayout>
+  <section class="home-intro-shell" data-reveal>
+    <figure class="home-portrait mobile-portrait">
+      <img src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao" />
+      <figcaption>Osaka, Japan · 2023</figcaption>
+    </figure>
+
+    <div class="home-flow">
+      <div class="about-left">
+      <h1>
+        Keyan
+        <em>
+          Miao
+          <svg class="name-cat" viewBox="0 0 64 52" aria-hidden="true" focusable="false">
+            <path class="cat-head" d="M14.3 22.2 9.9 7.2l14 8.3a24.5 24.5 0 0 1 16.2 0l14-8.3-4.4 15c4 3.2 6.3 7.5 6.3 12.2 0 9-10.7 14-24 14s-24-5-24-14c0-4.7 2.3-9 6.3-12.2Z" />
+            <path class="cat-ear" d="M17.6 18.4 13.9 11l7.2 5.1M46.4 18.4 50.1 11l-7.2 5.1" />
+            <path class="cat-whiskers" d="M22.5 34.8c-4.4-1.2-8.3-1.4-12.2-.6M22.7 38.5c-4.1.5-7.7 1.7-10.8 3.7M41.5 34.8c4.4-1.2 8.3-1.4 12.2-.6M41.3 38.5c4.1.5 7.7 1.7 10.8 3.7" />
+            <circle class="cat-eye" cx="24.2" cy="29.4" r="2.2" />
+            <circle class="cat-eye" cx="39.8" cy="29.4" r="2.2" />
+            <path class="cat-nose" d="M30.2 35.4c.9-.9 2.7-.9 3.6 0-.6 1.2-3 1.2-3.6 0Z" />
+            <path class="cat-mouth" d="M32 36.5v2.1M32 38.6c-1.5 1.8-4.4 1.8-5.7.2M32 38.6c1.5 1.8 4.4 1.8 5.7.2" />
+          </svg>
+        </em>
+      </h1>
+      <div class="bio-copy">
+        <p>I'm currently a DPhil candidate in the <a href="https://eng.ox.ac.uk/" target="_blank"> Department of Engineering Science </a> at <a href="https://www.ox.ac.uk/" target="_blank"> University of Oxford </a>, as a member of the <a href="https://eng.ox.ac.uk/control/" target="_blank">Control Engineering Group</a>, under the supervision of Prof. <a href="https://eng.ox.ac.uk/people/antonis-papachristodoulou/" target="_blank">Antonis Papachristodoulou</a> and Dr. <a href="https://kgatsis.github.io/" target="_blank">Konstantinos Gatsis</a>.</p>
+        <p>Prior to joining the DPhil program, I obtained my master's degree in Control Systems from <a href="https://www.imperial.ac.uk/" target="_blank"> Imperial College London </a>, under the supervision of Professor <a href="https://www.imperial.ac.uk/people/r.vinter" target="_blank">Richard Vinter</a> and a BEng in Detection, Guidance and Control at Northwestern Polytechnical University. Outside academia, I play violin with the Hertford College Orchestra.</p>
+        <p class="bio-quote">Building reliable learning systems through control-theoretic insight.</p>
+      </div>
+      <nav class="social-links" aria-label="Profile links">
+        <a href="https://github.com/KYMiao" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.45-1.15-1.1-1.46-1.1-1.46-.9-.61.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.88 1.51 2.32 1.08 2.88.82.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 5.97c.85 0 1.7.11 2.5.34 1.9-1.3 2.74-1.03 2.74-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.93.68 1.88v2.78c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=HxFJ_DQAAAAJ&hl=en" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1.8 11.2 12 19.4l10.2-8.2L12 3Zm0 2.55 6.95 5.65L12 16.85 5.05 11.2 12 5.55ZM5.4 17.2c1.7 2.35 3.9 3.53 6.6 3.53s4.9-1.18 6.6-3.53l-1.6-1.3c-1.28 1.82-2.95 2.73-5 2.73s-3.72-.91-5-2.73l-1.6 1.3Z"/></svg>
+          <span>Scholar</span>
+        </a>
+        <a href="https://uk.linkedin.com/in/keyan-miao-a1623818b" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.9h3.1v10H5.2v-10Zm1.55-4.8a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm3.75 4.8h2.95v1.36h.04c.41-.78 1.42-1.6 2.92-1.6 3.12 0 3.7 2.05 3.7 4.72v5.52H17v-4.89c0-1.17-.02-2.67-1.63-2.67-1.64 0-1.89 1.27-1.89 2.58v4.98H10.5v-10Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="/cv/" aria-label="CV">
+          <span class="text-icon">CV</span>
+          <span>CV</span>
+        </a>
+        <a href="mailto:keyan.miao@eng.ox.ac.uk" aria-label="Email">
+          <span class="text-icon">@</span>
+          <span>Email</span>
+        </a>
+      </nav>
+      </div>
+
+    </div>
+
+    <aside class="about-side desktop-portrait">
+      <figure class="home-portrait">
+        <img src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao" />
+        <figcaption>Osaka Japan · 2023</figcaption>
+      </figure>
+    </aside>
+  </section>
+
+  <section class="quiet-section home-news" data-reveal>
+    <div class="section-kicker">
+      <p class="eyebrow">News</p>
+      <a href="/news/">More</a>
+    </div>
+    <div class="news-list">
+      {homeNews.map((item) => (
+        <article>
+          <time>{item.date}</time>
+          <p set:html={item.html} />
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="quiet-section compact-research" data-reveal>
+    <div class="section-kicker">
+      <p class="eyebrow">Research</p>
+      <a href="/research/">More</a>
+    </div>
+    <div class="research-cards">
+      {researchDirections.map((direction, index) => (
+        <a href={`/research/${direction.slug}/`}>
+          <img src={direction.image} alt={`${direction.title} visual`} />
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <h2>{direction.title}</h2>
+          <p>{direction.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="quiet-section home-publications" data-reveal>
+    <div class="section-kicker">
+      <p class="eyebrow">Publications from Google Scholar</p>
+      <a href="/publications/">All publications</a>
+    </div>
+    <div class="publication-stack">
+      {publicationCards.map(({ entry, Content }) => <PublicationCard entry={entry} compact><Content /></PublicationCard>)}
+    </div>
+  </section>
+
+  <section class="quiet-section home-extras" data-reveal>
+    <div>
+      <div class="section-kicker">
+        <p class="eyebrow">Writing</p>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div class="compact-list">
+        {posts.length ? posts.map((post) => <a href={`/blog/${slugFor(post)}/`}>{post.data.title}<span>{formatDate(post.data.date)}</span></a>) : <p class="empty-note">Notes in progress.</p>}
+      </div>
+    </div>
+    <div>
+      <div class="section-kicker">
+        <p class="eyebrow">Photography</p>
+        <a href="/photography/">Series</a>
+      </div>
+      <div class="compact-list">
+        {photos.map((photo) => <a href={`/photography/${slugFor(photo)}/`}>{photo.data.title}<span>{photo.data.place}</span></a>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

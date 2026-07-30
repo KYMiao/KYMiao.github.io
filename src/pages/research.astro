@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { researchDirections } from "../lib/research";
+---
+
+<BaseLayout title="Research" description="Research directions in learning-based control and continuous-time machine learning.">
+  <section class="archive-hero" data-reveal>
+    <p class="eyebrow">Research</p>
+    <h1>Research directions</h1>
+    <div class="archive-meta">
+      <span>Control</span>
+      <span>Learning</span>
+      <span>Dynamical systems</span>
+    </div>
+  </section>
+
+  <section class="quiet-section" data-reveal>
+    <div class="research-cards large">
+      {researchDirections.map((direction, index) => (
+        <a href={`/research/${direction.slug}/`}>
+          <img src={direction.image} alt={`${direction.title} visual`} />
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <h2>{direction.title}</h2>
+          <p>{direction.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { newsItems } from "../lib/news";
+---
+
+<BaseLayout title="News" description="Recent news and updates from Keyan Miao.">
+  <section class="archive-hero" data-reveal>
+    <p class="eyebrow">Updates</p>
+    <h1>News</h1>
+    <div class="archive-meta">
+      <span>{newsItems.length} updates</span>
+      <span>Talks, papers, visits, and conferences</span>
+    </div>
+  </section>
+
+  <section class="archive-shell news-archive" data-reveal>
+    <aside>
+      <p>Selected academic updates, listed by month.</p>
+    </aside>
+    <div class="news-list">
+      {newsItems.map((item) => (
+        <article>
+          <time>{item.date}</time>
+          <p set:html={item.html} />
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

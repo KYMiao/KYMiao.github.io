@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { slugFor, visibleEntries, yearOf } from "../../lib/content";
+
+export async function getStaticPaths() {
+  const entries = visibleEntries(await getCollection("publications"));
+  return entries.map((entry) => ({
+    params: { slug: slugFor(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const data = entry.data;
+const abstract = data.abstract ?? "Abstract text is being curated from the paper metadata.";
+---
+
+<BaseLayout title={data.title} description={data.summary ?? data.title}>
+  <article class="content-wrap article" data-reveal>
+    <header class="article-header">
+      <p class="eyebrow">Publication{data.date && ` · ${yearOf(data.date)}`}</p>
+      <h1>{data.title}</h1>
+      {data.authors && <p>{data.authors.join(", ")}</p>}
+      {data.publication && <p>{data.publication}</p>}
+    </header>
+    {data.links && (
+      <div class="hero-actions">
+        {data.links.map((link) => <a class="button" href={link.url}>{link.name}</a>)}
+      </div>
+    )}
+    <section class="paper-abstract" aria-labelledby="paper-abstract-heading">
+      <p class="eyebrow" id="paper-abstract-heading">Abstract</p>
+      <p>{abstract}</p>
+    </section>
+  </article>
+</BaseLayout>

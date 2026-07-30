@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Learning with constraints and guarantees</title>
+  <desc id="desc">Candidate solutions are guided by constraints into a verified feasible set.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#746b66"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" rx="32" fill="#f2eee9"/>
+  <text x="120" y="116" fill="#312d2b" font-family="Arial, sans-serif" font-size="30" font-weight="600">candidate solutions</text>
+  <g fill="#c8867f">
+    <circle cx="150" cy="238" r="15"/><circle cx="252" cy="292" r="15"/>
+    <circle cx="135" cy="390" r="15"/><circle cx="275" cy="475" r="15"/>
+    <circle cx="178" cy="588" r="15"/><circle cx="320" cy="635" r="15"/>
+  </g>
+  <path d="M355 218C438 278 435 495 355 584" fill="none" stroke="#746b66" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="400" y="116" fill="#312d2b" font-family="Arial, sans-serif" font-size="30" font-weight="600">constraints</text>
+  <g fill="none" stroke-width="5">
+    <path d="M470 210 560 400 470 590" stroke="#7e9c9a"/>
+    <path d="M535 180 650 400 535 620" stroke="#bb9164"/>
+    <path d="M605 160 735 400 605 640" stroke="#8c7e9d"/>
+  </g>
+  <path d="M675 210C805 210 958 270 1018 400 958 530 805 590 675 590 720 475 720 325 675 210Z" fill="#dfe8df" stroke="#5f7867" stroke-width="5"/>
+  <g fill="#5f7867">
+    <circle cx="768" cy="315" r="15"/><circle cx="875" cy="365" r="15"/>
+    <circle cx="790" cy="455" r="15"/><circle cx="925" cy="475" r="15"/>
+  </g>
+  <circle cx="884" cy="405" r="61" fill="none" stroke="#5f7867" stroke-width="4"/>
+  <path d="m850 405 23 23 47-54" fill="none" stroke="#5f7867" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="746" y="684" fill="#312d2b" font-family="Arial, sans-serif" font-size="30" font-weight="600">verified feasible model</text>
+</svg>

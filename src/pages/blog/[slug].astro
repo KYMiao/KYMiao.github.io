@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatDate, slugFor, visibleEntries } from "../../lib/content";
+
+export async function getStaticPaths() {
+  const entries = visibleEntries(await getCollection("blog"));
+  return entries.map((entry) => ({
+    params: { slug: slugFor(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const data = entry.data;
+---
+
+<BaseLayout title={data.title} description={data.summary ?? data.title}>
+  <article class="content-wrap article" data-reveal>
+    <header class="article-header">
+      <p class="eyebrow">Writing{data.date && ` · ${formatDate(data.date, { month: "short", day: "numeric", year: "numeric" })}`}</p>
+      <h1>{data.title}</h1>
+      {data.summary && <p>{data.summary}</p>}
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

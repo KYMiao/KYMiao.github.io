@@ -22,7 +22,7 @@ const cards = await Promise.all(
 
   <section class="archive-shell" data-reveal>
     <aside>
-      <p>Selected papers and preprints, organized as a research ledger rather than a citation dump.</p>
+      <p>Selected papers and preprints.</p>
     </aside>
     <div class="publication-list">
       {cards.map(({ entry, Content }) => <PublicationCard entry={entry}><Content /></PublicationCard>)}

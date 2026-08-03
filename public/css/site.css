@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600;700;800&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=block");
 
 :root {
   color-scheme: light dark;
   --bg: #eceae4;
   --bg-2: #f4f2ed;
   --ink: #171717;
-  --muted: #6f6b65;
-  --dim: #8c8780;
+  --muted: #5f5b56;
+  --dim: #77726c;
   --line: rgba(23, 23, 23, 0.12);
   --accent: #8f6f68;
   --glow: rgba(255, 255, 255, 0.45);
@@ -32,8 +32,8 @@ body {
     radial-gradient(circle at 76% 10%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 32rem),
     linear-gradient(180deg, var(--bg-start) 0%, var(--bg-mid) 48%, var(--bg-end) 100%);
   font-family: var(--serif);
-  font-weight: 300;
-  line-height: 1.55;
+  font-weight: 400;
+  line-height: 1.5;
   transition: background-color 420ms ease, color 420ms ease;
 }
 
@@ -57,8 +57,8 @@ body.theme-day {
   --bg: #eceae4;
   --bg-2: #f4f2ed;
   --ink: #171717;
-  --muted: #6f6b65;
-  --dim: #8c8780;
+  --muted: #5f5b56;
+  --dim: #77726c;
   --line: rgba(23, 23, 23, 0.12);
   --accent: #8f6f68;
   --glow: rgba(255, 255, 255, 0.45);
@@ -71,8 +71,8 @@ body.theme-night {
   --bg: #101112;
   --bg-2: #181817;
   --ink: #f1eee8;
-  --muted: #aaa39c;
-  --dim: #746f6a;
+  --muted: #bbb4ac;
+  --dim: #8f8983;
   --line: rgba(241, 238, 232, 0.1);
   --accent: #c5a7a0;
   --glow: rgba(241, 243, 242, 0.05);
@@ -400,9 +400,9 @@ img {
 }
 
 .about-left h1 {
+  font-family: var(--serif);
   margin: 0 0 1.35rem;
   color: var(--ink);
-  font-family: var(--serif);
   font-size: clamp(3.95rem, 7.7vw, 6.85rem);
   font-weight: 300;
   line-height: 0.86;
@@ -562,14 +562,15 @@ img {
 }
 
 .bio-copy p {
-  max-width: 36rem;
+  max-width: 34rem;
   margin: 0 0 1.12rem;
-  color: color-mix(in srgb, var(--ink) 86%, transparent);
+  color: color-mix(in srgb, var(--ink) 92%, transparent);
   font-size: clamp(1.08rem, 1.18vw, 1.18rem);
-  line-height: 1.62;
-  text-align: justify;
-  text-align-last: left;
-  hyphens: auto;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  text-align: left;
+  hyphens: none;
 }
 
 .bio-copy a {
@@ -583,6 +584,7 @@ img {
   color: color-mix(in srgb, var(--accent) 72%, var(--ink)) !important;
   font-size: clamp(1.36rem, 1.75vw, 1.62rem) !important;
   font-style: italic;
+  font-family: var(--serif);
   line-height: 1.24 !important;
   text-align: left;
   hyphens: none;
@@ -699,9 +701,10 @@ img {
 
 .news-list p {
   margin: 0;
-  color: color-mix(in srgb, var(--ink) 82%, transparent);
+  color: color-mix(in srgb, var(--ink) 90%, transparent);
   font-size: clamp(1.05rem, 1.12vw, 1.15rem);
-  line-height: 1.54;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .news-list p a {
@@ -792,13 +795,14 @@ img {
 .research-cards img {
   width: 100%;
   aspect-ratio: 3 / 2;
-  object-fit: cover;
-  filter: grayscale(0.56) contrast(1.04);
+  object-fit: contain;
+  background: #fff;
+  filter: grayscale(0.12) contrast(1.02);
   transition: filter 220ms ease, transform 260ms ease;
 }
 
 .research-cards a:hover img {
-  filter: grayscale(0.18) contrast(1.05);
+  filter: grayscale(0) contrast(1.03);
   transform: scale(1.018);
 }
 
@@ -818,17 +822,21 @@ img {
 }
 
 .research-cards h2 {
+  font-family: var(--serif);
   margin-top: 0.55rem;
   margin-bottom: 0;
   font-size: clamp(1.15rem, 1.7vw, 1.55rem);
-  font-style: italic;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
 }
 
 .research-cards p {
   margin-top: 0.7rem;
   margin-bottom: 1rem;
   color: var(--muted);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .research-cards.large a {
@@ -936,6 +944,7 @@ img {
 }
 
 .publication-card h3 {
+  font-family: var(--serif);
   max-width: 48rem;
   margin: 0;
   color: var(--accent);
@@ -1712,6 +1721,7 @@ body.photo-page img {
 }
 
 .research-detail h1 {
+  font-family: var(--serif);
   max-width: 10ch;
   margin: 0;
   font-size: clamp(2.6rem, 6vw, 5rem);
@@ -1735,9 +1745,9 @@ body.photo-page img {
   width: 100%;
   max-height: 36rem;
   object-fit: contain;
-  background: #f6f4f1;
+  background: #fff;
   border: 1px solid var(--line);
-  filter: grayscale(0.32) contrast(1.04);
+  filter: grayscale(0.08) contrast(1.02);
 }
 
 .research-detail figcaption {

@@ -1,9 +1,13 @@
 export const researchDirections = [
   {
     slug: "learning-with-constraints",
-    title: "Learning with Constraints/Guarantees",
+    title: "Learning With Constraints/Guarantees",
     kicker: "Constraints · Verification · Guarantees",
-    image: "/uploads/research/learning-with-constraints-generated-v2.png",
+    image: "/uploads/research/koopman-paper-overview.png",
+    imageCredit: {
+      label: "Miao et al., Learning Koopman Representations with Controllability Guarantees",
+      source: "/publications/learning-koopman-representations-with-controllability-guarantees/",
+    },
     summary:
       "Building constraints, structure, and formal guarantees directly into learning.",
     intro:
@@ -18,9 +22,13 @@ export const researchDirections = [
   },
   {
     slug: "control-informed-machine-learning",
-    title: "Control-informed machine learning",
+    title: "Control-Informed Machine Learning",
     kicker: "Models · Training · Optimization",
-    image: "/uploads/research/control-informed-machine-learning-generated-v2.png",
+    image: "/uploads/research/public-control-for-learning.png",
+    imageCredit: {
+      label: "Chen et al., Nature Communications (2024), Fig. 1 · CC BY-NC-ND 4.0",
+      source: "https://www.nature.com/articles/s41467-024-54451-3/figures/1",
+    },
     summary:
       "Using control perspectives to understand and improve learning models, training, and optimization.",
     intro:
@@ -33,9 +41,13 @@ export const researchDirections = [
   },
   {
     slug: "learning-based-control",
-    title: "Learning-based control",
+    title: "Learning-Based Control",
     kicker: "Learning · Modeling · Control",
-    image: "/uploads/research/learning-based-control-generated.png",
+    image: "/uploads/research/public-machine-learning-control.png",
+    imageCredit: {
+      label: "Zhai et al., Nature Communications (2023), Fig. 2 · CC BY 4.0",
+      source: "https://www.nature.com/articles/s41467-023-41379-3/figures/2",
+    },
     summary:
       "Integrating learning with modeling, estimation, prediction, and control of dynamical systems.",
     intro:

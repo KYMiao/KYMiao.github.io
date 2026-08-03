@@ -1375,6 +1375,33 @@ body.photo-page .site-header {
   padding: clamp(7rem, 12vh, 9rem) 0 5rem;
 }
 
+.photo-story-back {
+  position: absolute;
+  top: clamp(4.9rem, 8vh, 6rem);
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.photo-story-back span {
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.photo-story-back:hover {
+  color: var(--ink);
+  transform: translateX(-0.2rem);
+}
+
 .photo-story-hero {
   min-height: 78vh;
   display: grid;
@@ -2072,6 +2099,10 @@ body.photo-page img {
   .photo-story {
     width: min(100% - 1.6rem, 560px);
     padding-top: 6.4rem;
+  }
+
+  .photo-story-back {
+    top: 4.65rem;
   }
 
   .photo-story-hero {

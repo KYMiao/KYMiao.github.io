@@ -22,6 +22,9 @@ const heroCaption = `${data.title} · ${data.place}`;
 
 <BaseLayout title={data.title} description={data.caption ?? data.title} bodyClass="photo-page" bodyStyle={`--photo-bg: url('${atmosphereImage}')`}>
   <article class="photo-story" data-reveal>
+    <a class="photo-story-back" href="/photography/" aria-label="Back to Photography">
+      <span aria-hidden="true">←</span> Photography
+    </a>
     <header class="photo-story-hero">
       <div>
         <p class="eyebrow">Photography{data.series_date && ` · ${data.series_date}`}</p>

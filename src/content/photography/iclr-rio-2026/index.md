@@ -28,7 +28,7 @@ gallery:
     alt: "Sugarloaf Mountain Sunset"
   - src: "/uploads/photography/iclr-rio-2026/IMG_5486.JPG"
     alt: "Escadaria Selarón"
-  - src: "/uploads/photography/iclr-rio-2026/IMG_5177.HEIC"
+  - src: "/uploads/photography/iclr-rio-2026/IMG_5177.jpg"
     alt: "Rio Sunset"
   - src: "/uploads/photography/iclr-rio-2026/DSC_7541.jpg"
     alt: "Parque das Aves, Iguazu"

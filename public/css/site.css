@@ -552,6 +552,29 @@ img {
   filter: none;
 }
 
+.home-portrait-frame {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.home-portrait-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 520ms ease, transform 720ms ease;
+}
+
+.home-portrait-frame .portrait-current {
+  opacity: 1;
+}
+
+.home-portrait-frame .portrait-memory {
+  opacity: 0;
+}
+
 .home-portrait figcaption {
   margin-top: 0.45rem;
   color: var(--dim);
@@ -559,6 +582,33 @@ img {
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.home-portrait figcaption span {
+  transition: opacity 320ms ease;
+}
+
+.home-portrait .caption-memory {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-portrait:hover .portrait-current {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+
+  .home-portrait:hover .portrait-memory {
+    opacity: 1;
+  }
+
+  .home-portrait:hover .caption-current {
+    display: none;
+  }
+
+  .home-portrait:hover .caption-memory {
+    display: inline;
+  }
 }
 
 .bio-copy p {

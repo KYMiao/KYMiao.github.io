@@ -18,8 +18,11 @@ const homeNews = newsItems.slice(0, 6);
 <BaseLayout>
   <section class="home-intro-shell" data-reveal>
     <figure class="home-portrait mobile-portrait">
-      <img src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao" />
-      <figcaption>Osaka, Japan · 2023</figcaption>
+      <div class="home-portrait-frame">
+        <img class="portrait-current" src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao in London" />
+        <img class="portrait-memory" src="/uploads/avatar2.jpg" alt="Portrait of Keyan Miao in Osaka" aria-hidden="true" />
+      </div>
+      <figcaption><span class="caption-current">London, UK · 2026</span><span class="caption-memory">Osaka, Japan · 2023</span></figcaption>
     </figure>
 
     <div class="home-flow">
@@ -72,8 +75,11 @@ const homeNews = newsItems.slice(0, 6);
 
     <aside class="about-side desktop-portrait">
       <figure class="home-portrait">
-        <img src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao" />
-        <figcaption>Osaka Japan · 2023</figcaption>
+        <div class="home-portrait-frame">
+          <img class="portrait-current" src="/uploads/avatar.jpg" alt="Portrait of Keyan Miao in London" />
+          <img class="portrait-memory" src="/uploads/avatar2.jpg" alt="Portrait of Keyan Miao in Osaka" aria-hidden="true" />
+        </div>
+        <figcaption><span class="caption-current">London, UK · 2026</span><span class="caption-memory">Osaka, Japan · 2023</span></figcaption>
       </figure>
     </aside>
   </section>

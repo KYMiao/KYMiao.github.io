@@ -12,7 +12,7 @@ const publicationCards = await Promise.all(
 );
 const posts = byDateDesc(visibleEntries(await getCollection("blog"))).slice(0, 2);
 const photos = byDateDesc(visibleEntries(await getCollection("photography"))).slice(0, 3);
-const homeNews = newsItems.slice(0, 7);
+const homeNews = newsItems.slice(0, 10);
 ---
 
 <BaseLayout>

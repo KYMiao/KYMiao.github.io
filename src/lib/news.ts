@@ -29,6 +29,10 @@ export const newsItems: NewsItem[] = [
     html: "Received an EPSRC Pathway Postdoctoral Fellowship.",
   },
   {
+    date: "May. 2026",
+    html: 'Received an <a href="https://icml.cc/Conferences/2026">ICML 2026 Gold Reviewer Award</a>.',
+  },
+  {
     date: "Apr. 2026",
     html: 'Attended the <a href="https://iclr.cc/">14th International Conference on Learning Representations (ICLR)</a> in Rio de Janeiro, Brazil.',
   },

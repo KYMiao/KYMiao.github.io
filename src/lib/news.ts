@@ -5,6 +5,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    date: "Oct. 2026",
+    html: 'Recognized as a Top Reviewer at <a href="https://neurips.cc/">NeurIPS 2026</a>.',
+  },
+  {
+    date: "Oct. 2026",
+    html: 'Joined <a href="https://ethz.ch/en.html">ETH Zurich</a> as a postdoctoral researcher, working with Prof. <a href="https://mavt.ethz.ch/people/person-detail.zeilinger.html">Melanie Zeilinger</a>.',
+  },
+  {
+    date: "Oct. 2026",
+    html: 'My episode, <a href="https://open.spotify.com/episode/67TcV9Vd5bX9zIFrMMuOML"><em>Interfacing Control with Neural ODEs</em></a>, is now available on the <em>Coffee and Control</em> podcast.',
+  },
+  {
+    date: "Sep. 2026",
+    html: 'Paper <a href="https://neurips.cc/Downloads/2026"><em>Accelerating Neural Network Training with Augmented Koopman Dynamics</em></a> accepted by NeurIPS 2026.',
+  },
+  {
+    date: "Sep. 2026",
+    html: 'Paper <a href="https://arxiv.org/abs/2609.06450"><em>PLATO: Preintegration Learning from Accurate Trajectory Observations for Neural Inertial Odometry</em></a> accepted by CoRL 2026.',
+  },
+  {
     date: "Jun. 2026",
     html: "Received an EPSRC Pathway Postdoctoral Fellowship.",
   },

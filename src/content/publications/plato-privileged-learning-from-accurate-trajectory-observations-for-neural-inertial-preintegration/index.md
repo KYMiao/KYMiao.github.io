@@ -19,6 +19,8 @@ links:
   - name: PDF
     url: "https://arxiv.org/pdf/2609.06450"
 source: "CoRL 2026 / arXiv"
+image:
+  filename: "featured.png"
 ---
 
 2026 Conference on Robot Learning (CoRL), 2026

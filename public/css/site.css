@@ -723,20 +723,20 @@ img {
 }
 
 .home-news {
-  padding-top: 2.6rem;
-  padding-bottom: 2.6rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.35rem;
 }
 
 .news-list {
   display: grid;
-  gap: 0.2rem;
+  gap: 0;
 }
 
 .news-list article {
   display: grid;
-  grid-template-columns: 6.9rem minmax(0, 1fr);
-  gap: 1.35rem;
-  padding: 0.62rem 0;
+  grid-template-columns: 6.55rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.42rem 0;
   border-bottom: 0;
   align-items: baseline;
 }
@@ -746,7 +746,7 @@ img {
   font-family: var(--sans);
   font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
 }
 
 .news-list p {
@@ -754,7 +754,7 @@ img {
   color: color-mix(in srgb, var(--ink) 90%, transparent);
   font-size: clamp(1.05rem, 1.12vw, 1.15rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.38;
 }
 
 .news-list p a {
@@ -767,8 +767,8 @@ img {
 }
 
 .news-archive .news-list article {
-  grid-template-columns: 7rem minmax(0, 1fr);
-  padding: 0.8rem 0;
+  grid-template-columns: 6.55rem minmax(0, 1fr);
+  padding: 0.55rem 0;
 }
 
 .home-news + .compact-research,
@@ -2077,8 +2077,8 @@ body.photo-page img {
 
   .news-list article {
     grid-template-columns: 1fr;
-    gap: 0.1rem;
-    padding: 0.62rem 0;
+    gap: 0.04rem;
+    padding: 0.44rem 0;
   }
 
   .news-list time {
@@ -2088,7 +2088,7 @@ body.photo-page img {
   .news-list p {
     color: color-mix(in srgb, var(--ink) 84%, transparent);
     font-size: 1.04rem;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   .research-cards a {
